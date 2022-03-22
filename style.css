@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #a7a6a6;
+  background-color: #a7a6a6 !important;
 }
 
 header {
@@ -33,5 +33,14 @@ header h1 {
 main {
   padding: 20px 50px;
   font-family: 'Manrope', sans-serif;
+}
+
+main hr {
+  margin: 25px 0;
+}
+
+main .test {
+  border: 1px solid green;
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
