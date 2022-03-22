@@ -10,6 +10,10 @@
   outline: none;
 }
 
+body {
+  background-color: #a7a6a6;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,5 +28,10 @@ header {
 
 header h1 {
   font-size: 2.5rem;
+}
+
+main {
+  padding: 20px 50px;
+  font-family: 'Manrope', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
