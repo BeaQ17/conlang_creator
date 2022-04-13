@@ -36,11 +36,15 @@ main {
 }
 
 main hr {
-  margin: 25px 0;
+  margin: 25px 20px;
 }
 
 main .test {
   border: 1px solid green;
   height: 100px;
+}
+
+main .shuffler .word {
+  margin-bottom: 45px;
 }
 /*# sourceMappingURL=style.css.map */
