@@ -53,8 +53,31 @@ main{
         height: 100px;
     }
     .shuffler{
+        .btn{
+            margin: 25px 0px;
+            padding: 0;
+            .shuffle-btn{
+                width: fit-content;
+                padding: 10px 30px;
+                color: white;
+                background-color: rgb(14, 14, 97);
+                border: none;
+            }
+        }
         .word{
             margin-bottom: 45px;
+            .w1{
+                color: rgb(133, 4, 4);
+                font-weight: bold;
+            }
+            .w2{
+                color: rgb(133, 91, 1);
+                font-weight: bold;
+            }
+            .w3{
+                color: rgb(0, 97, 0);
+                font-weight: bold;
+            }
         }
     }
 

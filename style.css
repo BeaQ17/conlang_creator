@@ -44,7 +44,37 @@ main .test {
   height: 100px;
 }
 
+main .shuffler .btn {
+  margin: 25px 0px;
+  padding: 0;
+}
+
+main .shuffler .btn .shuffle-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 30px;
+  color: white;
+  background-color: #0e0e61;
+  border: none;
+}
+
 main .shuffler .word {
   margin-bottom: 45px;
+}
+
+main .shuffler .word .w1 {
+  color: #850404;
+  font-weight: bold;
+}
+
+main .shuffler .word .w2 {
+  color: #855b01;
+  font-weight: bold;
+}
+
+main .shuffler .word .w3 {
+  color: #006100;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
