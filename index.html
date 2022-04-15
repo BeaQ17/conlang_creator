@@ -27,6 +27,11 @@
     </header>
 
     <main>
+
+        <div class="content-index">
+            <p>Go to:</p>
+            <a href="#alphabet-shuffler-container">Alphabet shuffler</a>
+        </div>
        <!--<div class="testTitle">
             <h3><bold>Hello test</bold></h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor pariatur, cupiditate maxime odit nostrum accusamus.</p>
@@ -47,7 +52,7 @@
             </div>
         </div> -->
         <hr>
-        <div class="shuffler">
+        <div class="shuffler" id="alphabet-shuffler-container">
             <h1>Alphabet shuffler</h1>
             <p><strong>Instructions:</strong> 
                 <br>Click the button to shuffle the alphabet. 
@@ -117,7 +122,7 @@
 
         //make the button listen for the click and do the thing
         shuffleBtn.addEventListener("click", () => {
-            let index = getIndexNumber(0, alphabet.length-1);
+            let index = getIndexNumber(0, alphabet.length-1); //it is -1 because arrays start counting from 0
             resultOne.innerText = alphabet[index];
         });
 

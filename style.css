@@ -35,6 +35,10 @@ main {
   font-family: 'Manrope', sans-serif;
 }
 
+main a {
+  text-decoration: none;
+}
+
 main hr {
   margin: 25px 20px;
 }
