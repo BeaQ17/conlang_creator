@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: rgb(167, 166, 166) !important;
+    background-color: rgb(177, 176, 176) !important;
 }
 
 // body{
@@ -30,12 +30,19 @@ body{
 // HEADER
 header{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    font-family: 'Cinzel', serif;
     padding: 25px 0;
     h1{
         font-size: 2.5rem;
+        text-align: center;
+        font-family: 'Cinzel', serif;
+    }
+    h6{
+        text-align: center;
+        font-family: 'Manrope', sans-serif;
     }
 }
 
@@ -47,13 +54,26 @@ main{
     font-family: 'Manrope', sans-serif;
     a{
         text-decoration: none;
+        color: white;
     }
     hr{
-        margin: 25px 20px;
+        margin: 25px 0px;
     }
     .test{
         border: 1px solid green;
         height: 100px;
+    }
+    .adder{
+        .add-btn{
+            width: fit-content;
+            padding: 2px 20px;
+            color: white;
+            background-color: rgb(97, 14, 86);
+            border: none;
+        }
+        h4{
+            margin-top: 20px;
+        }
     }
     .shuffler{
         .btn{
@@ -69,10 +89,16 @@ main{
         }
         .word{
             margin-bottom: 45px;
+            display: flex;
+            flex-direction: row;
+            h3{
+                margin-right: 8px;
+            }
             .w1{
                 color: rgb(133, 4, 4);
                 font-weight: bold;
             }
+            /*
             .w2{
                 color: rgb(133, 91, 1);
                 font-weight: bold;
@@ -81,7 +107,21 @@ main{
                 color: rgb(0, 97, 0);
                 font-weight: bold;
             }
+            */
         }
+    }
+
+    .scroll-to-top{
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: rgb(95, 19, 19); /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer;
+        padding: 10px 30px;
     }
 
 }

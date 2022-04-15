@@ -23,15 +23,87 @@
 <body>
 
     <header>
-        <h1>Conlang Creator</h1>
+        <h1 id="hero-title">Conlang Creator</h1>
+        <h6>From Allegoris</h6>
     </header>
 
     <main>
 
-        <div class="content-index">
+        <div class="content-index" id="content-index">
+            <p>Compose your alphabet and shuffle it to make sure you don't neglect any sound</p>
             <p>Go to:</p>
-            <a href="#alphabet-shuffler-container">Alphabet shuffler</a>
+            <a href="#add-letters-container">Alphabet filler</a> <br>
+            <a href="#alphabet-shuffler-container">Alphabet shuffler</a> <br>
         </div>
+        <hr>
+
+        <!--
+            IDEAS
+            - function to add letter to cluster, then cluster (=word) to wordlist. Wordlist is alphabetically ordered
+            - create words directly. Choose length, then generate word, option to add it to wordlist
+        -->
+
+        <!-- ADDER -->
+        <div class="adder" id="add-letters-container">
+            <h1>Alphabet filler</h1>
+            <p><strong>Instructions:</strong> 
+                <br>Write the letter you want to add. 
+                <br>Click the add button.  
+                <br>At the moment you can't remove letters from the array. Refresh the page to empty it.
+            </p>
+            <input type="text" name="add-letter-input" id="add-letter-input" placeholder="A lettere here, please">
+            <button class="add-btn" onclick="addLetter()">Add letter</button>
+            <h4>This is your current alphabet:</h4>
+            <ul>
+                <li id="ab-list"></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- SHUFFLER -->
+        <div class="shuffler" id="alphabet-shuffler-container">
+            <h1>Alphabet shuffler</h1>
+            <p><strong>Instructions:</strong> 
+                <br>Click the button to shuffle the alphabet you've made. 
+                <br>Note the letters down and make a word. 
+                <br>This is mainly to make sure no letters are overused and others ignored.
+                <!--<br><strong>NB: this alphabet is already made. You can't change it with the adder.</strong> -->
+            </p>
+
+            <div class="btn">
+                <button class="shuffle-btn" id="shuffle-btn">Shuffle</button>
+            </div>
+            
+            <div class="word">
+                <h3>Letter:</h3><h3 class="w1" id="letter"></h3>
+            </div>
+
+        </div>
+
+        <!--
+        <div class="list">
+            <h5>Remember:</h5>
+            <p>dʒ = j</p>
+            <p>t͡ʃ = "sweet" c</p>
+            <p>ʃ = sh</p>
+        </div> -->
+
+
+        <button class="scroll-to-top"><a href="#hero-title">Go to top</a></button>
+    </main>
+    
+    <!-- JS -->
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
        <!--<div class="testTitle">
             <h3><bold>Hello test</bold></h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor pariatur, cupiditate maxime odit nostrum accusamus.</p>
@@ -51,81 +123,3 @@
                 </div>
             </div>
         </div> -->
-        <hr>
-        <div class="shuffler" id="alphabet-shuffler-container">
-            <h1>Alphabet shuffler</h1>
-            <p><strong>Instructions:</strong> 
-                <br>Click the button to shuffle the alphabet. 
-                <br>Note the letters down and make a word. 
-                <br>This is mainly to make sure no letters are overused and others ignored.
-            </p>
-
-            <div class="btn">
-                <button class="shuffle-btn" id="shuffle-btn">Shuffle</button>
-            </div>
-            
-            <div class="word">
-                <h3>Letter</h3>
-                <p class="w1" id="letter"></p>
-            </div>
-            <!--<div class="word">
-                <h3>Word two</h3>
-                <p class="w2" id="word-two">Hello</p>
-            </div>
-            <div class="word w3">
-                <h3>Word three</h3>
-                <p class="w3" id="word-three">Hello</p>
-            </div>-->
-
-
-            <!--
-                IDEAS
-                - function to add letter to cluster, then cluster (=word) to wordlist. Wordlist is alphabetically ordered
-                - create words directly. Choose length, then generate word, option to add it to wordlist
-            -->
-
-
-        </div>
-
-        <div class="list">
-            <h5>Remember:</h5>
-            <p>dʒ = j</p>
-            <p>t͡ʃ = "sweet" c</p>
-            <p>ʃ = sh</p>
-        </div>
-
-
-    </main>
-    
-    <!-- JS -->
-    <script>
-
-        //get the button
-        let shuffleBtn = document.getElementById("shuffle-btn");
-
-        //get the p
-        let resultOne = document.getElementById("letter");
-        /*let resultTwo = document.getElementById("word-two");
-        let resultThree = document.getElementById("word-three");*/
-
-        //determine the alphabet array
-        alphabet = ["a", "b", "t͡ʃ", "d", "e", "f", "g", "ɦ", "i", "dʒ", "k", "l", "m", "ŋ", "o",
-                       "p", "r", "s", "ʃ", "t", "u", "v", "z" ];
-
-        //make the math function
-        function getIndexNumber(min, max){
-            let step1 = max - min + 1;
-            let step2 = Math.random() * step1;
-            let resultOne = Math.floor(step2) + min;
-            return resultOne;
-        }
-
-        //make the button listen for the click and do the thing
-        shuffleBtn.addEventListener("click", () => {
-            let index = getIndexNumber(0, alphabet.length-1); //it is -1 because arrays start counting from 0
-            resultOne.innerText = alphabet[index];
-        });
-
-    </script>
-</body>
-</html>

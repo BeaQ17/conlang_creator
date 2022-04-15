@@ -11,23 +11,36 @@
 }
 
 body {
-  background-color: #a7a6a6 !important;
+  background-color: #b1b0b0 !important;
 }
 
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  font-family: 'Cinzel', serif;
   padding: 25px 0;
 }
 
 header h1 {
   font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+}
+
+header h6 {
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
 }
 
 main {
@@ -37,15 +50,30 @@ main {
 
 main a {
   text-decoration: none;
+  color: white;
 }
 
 main hr {
-  margin: 25px 20px;
+  margin: 25px 0px;
 }
 
 main .test {
   border: 1px solid green;
   height: 100px;
+}
+
+main .adder .add-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 20px;
+  color: white;
+  background-color: #610e56;
+  border: none;
+}
+
+main .adder h4 {
+  margin-top: 20px;
 }
 
 main .shuffler .btn {
@@ -65,6 +93,27 @@ main .shuffler .btn .shuffle-btn {
 
 main .shuffler .word {
   margin-bottom: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /*
+            .w2{
+                color: rgb(133, 91, 1);
+                font-weight: bold;
+            }
+            .w3{
+                color: rgb(0, 97, 0);
+                font-weight: bold;
+            }
+            */
+}
+
+main .shuffler .word h3 {
+  margin-right: 8px;
 }
 
 main .shuffler .word .w1 {
@@ -72,13 +121,24 @@ main .shuffler .word .w1 {
   font-weight: bold;
 }
 
-main .shuffler .word .w2 {
-  color: #855b01;
-  font-weight: bold;
-}
-
-main .shuffler .word .w3 {
-  color: #006100;
-  font-weight: bold;
+main .scroll-to-top {
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: #5f1313;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  padding: 10px 30px;
 }
 /*# sourceMappingURL=style.css.map */
