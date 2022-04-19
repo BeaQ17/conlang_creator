@@ -11,6 +11,13 @@
 
 body{
     background-color: rgb(177, 176, 176) !important;
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    a:hover{
+        color: rgb(209, 209, 209);
+    }
 }
 
 // body{
@@ -35,14 +42,23 @@ header{
     align-items: center;
     width: 100%;
     padding: 25px 0;
+    a{
+        color: black;
+        text-align: center;
+        p{
+            text-align: center;
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        img{
+            width: 50px;
+        }
+    }
     h1{
         font-size: 2.5rem;
         text-align: center;
         font-family: 'Cinzel', serif;
-    }
-    h6{
-        text-align: center;
-        font-family: 'Manrope', sans-serif;
     }
 }
 
@@ -52,10 +68,6 @@ header{
 main{
     padding: 20px 50px;
     font-family: 'Manrope', sans-serif;
-    a{
-        text-decoration: none;
-        color: white;
-    }
     hr{
         margin: 25px 0px;
     }
@@ -64,13 +76,31 @@ main{
         height: 100px;
     }
     .adder{
-        .add-btn{
-            width: fit-content;
-            padding: 2px 20px;
-            color: white;
-            background-color: rgb(97, 14, 86);
-            border: none;
+        .label-p{
+            margin-bottom: 0;
+            margin-top: 10px;
+            font-size: 0.9rem;
         }
+        .input-box{
+            display: flex;
+            flex-direction: row;
+            .add-input{
+                padding: 3px;
+                width: 37px;
+                text-align: center;
+                border-radius: 0;
+                border: 2px solid rgb(97, 14, 86);
+            }
+            .add-btn{
+                width: fit-content;
+                padding: 4px 20px;
+                color: white;
+                background-color: rgb(97, 14, 86);
+                border: none;
+            }
+            
+        }
+
         h4{
             margin-top: 20px;
         }
@@ -110,6 +140,46 @@ main{
             */
         }
     }
+    .stringer{
+        .stringer-phases{
+            display: flex;
+            flex-direction: row;
+            .phase-1, .phase-2{
+                width: 50%;
+                padding: 15px;
+                .label-p{
+                    margin-bottom: 0;
+                    margin-top: 10px;
+                    font-size: 0.9rem;
+                }
+                .input-box{
+                    display: flex;
+                    flex-direction: row;
+                    .add-input{
+                        padding: 3px;
+                        width: 50px;
+                        text-align: center;
+                        border-radius: 0;
+                        border: 2px solid rgb(97, 14, 86);
+                    }
+                    .add-btn{
+                        width: fit-content;
+                        padding: 4px 20px;
+                        color: white;
+                        background-color: rgb(97, 14, 86);
+                        border: none;
+                    }
+                    
+                }
+                h4{
+                    margin-top: 20px;
+                }
+            }
+            .phase-1{
+                border-right: 1px dotted rgb(53, 52, 52);
+            }
+        }
+    }
 
     .scroll-to-top{
         position: fixed; /* Fixed/sticky position */
@@ -124,4 +194,29 @@ main{
         padding: 10px 30px;
     }
 
+}
+
+// FOOTER
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: rgb(117, 117, 117);
+    color: whitesmoke;
+    p{
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+    }
+    .links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        a{
+            font-size: 1.5rem;
+            margin: 0px 15px;
+        }
+    }
 }

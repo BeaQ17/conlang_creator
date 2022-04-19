@@ -14,6 +14,15 @@ body {
   background-color: #b1b0b0 !important;
 }
 
+body a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+body a:hover {
+  color: #d1d1d1;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,25 +41,31 @@ header {
   padding: 25px 0;
 }
 
+header a {
+  color: black;
+  text-align: center;
+}
+
+header a p {
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+header a img {
+  width: 50px;
+}
+
 header h1 {
   font-size: 2.5rem;
   text-align: center;
   font-family: 'Cinzel', serif;
 }
 
-header h6 {
-  text-align: center;
-  font-family: 'Manrope', sans-serif;
-}
-
 main {
   padding: 20px 50px;
   font-family: 'Manrope', sans-serif;
-}
-
-main a {
-  text-decoration: none;
-  color: white;
 }
 
 main hr {
@@ -62,11 +77,35 @@ main .test {
   height: 100px;
 }
 
-main .adder .add-btn {
+main .adder .label-p {
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+main .adder .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .adder .input-box .add-input {
+  padding: 3px;
+  width: 37px;
+  text-align: center;
+  border-radius: 0;
+  border: 2px solid #610e56;
+}
+
+main .adder .input-box .add-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 2px 20px;
+  padding: 4px 20px;
   color: white;
   background-color: #610e56;
   border: none;
@@ -121,6 +160,63 @@ main .shuffler .word .w1 {
   font-weight: bold;
 }
 
+main .stringer .stringer-phases {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .stringer .stringer-phases .phase-1, main .stringer .stringer-phases .phase-2 {
+  width: 50%;
+  padding: 15px;
+}
+
+main .stringer .stringer-phases .phase-1 .label-p, main .stringer .stringer-phases .phase-2 .label-p {
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+main .stringer .stringer-phases .phase-1 .input-box, main .stringer .stringer-phases .phase-2 .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .stringer .stringer-phases .phase-1 .input-box .add-input, main .stringer .stringer-phases .phase-2 .input-box .add-input {
+  padding: 3px;
+  width: 50px;
+  text-align: center;
+  border-radius: 0;
+  border: 2px solid #610e56;
+}
+
+main .stringer .stringer-phases .phase-1 .input-box .add-btn, main .stringer .stringer-phases .phase-2 .input-box .add-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 20px;
+  color: white;
+  background-color: #610e56;
+  border: none;
+}
+
+main .stringer .stringer-phases .phase-1 h4, main .stringer .stringer-phases .phase-2 h4 {
+  margin-top: 20px;
+}
+
+main .stringer .stringer-phases .phase-1 {
+  border-right: 1px dotted #353434;
+}
+
 main .scroll-to-top {
   position: fixed;
   /* Fixed/sticky position */
@@ -140,5 +236,50 @@ main .scroll-to-top {
   /* Text color */
   cursor: pointer;
   padding: 10px 30px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+  background-color: #757575;
+  color: whitesmoke;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .links a {
+  font-size: 1.5rem;
+  margin: 0px 15px;
 }
 /*# sourceMappingURL=style.css.map */

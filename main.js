@@ -51,3 +51,34 @@ shuffleBtn.addEventListener("click", () => {
     resultOne.innerText = userAlphabet[index];
     
 });
+
+
+
+///////////////////// STRINGER /////////////////////
+
+//define the empty array
+userSyllables = [];
+
+//add-letter function
+function addSyllable(){
+    let syllable = document.getElementById("add-syllable-input").value; //get user input
+    userSyllables.push(syllable); //push input in array
+    document.getElementById("add-syllable-input").value = ""; //clear input
+    //console.log(userSyllable); //print array in console
+
+    //display list of syllables on screen
+    let syllableList = document.getElementById("syllable-list"); //get the li element
+    syllableList.innerHTML = userSyllables.join("<li>"); //put the syllable in a new li element
+
+}
+
+//choose amount of syllables
+let amount = document.getElementById("amount-syllable-input").value;
+
+//shuffle and pick syllables
+const n = amount;
+const sample = items
+  .map(x => ({ x, r: Math.random() }))
+  .sort((a, b) => a.r - b.r)
+  .map(a => a.x)
+  .slice(0, n);
