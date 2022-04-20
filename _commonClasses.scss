@@ -1,6 +1,6 @@
 //BUTTONS
 .purple_btn{
-    min-width: fit-content;
+    width: fit-content;
     padding: 4px 20px;
     color: white;
     background-color: $dark-violet;
@@ -22,9 +22,25 @@
     padding: 3px;
 }
 
+.only-bottom{
+    border: none;
+    border-bottom: 2px solid $dark-grey;
+    background-color: transparent;
+    color: black;
+    margin: 15px 0px;
+}
+
 
 //ELEMENTS
 .row{
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0;
+}
+
+hr{
+    margin: 20px 25%;
+}
+
+.flip{
+    transform: rotate(180deg);
 }
