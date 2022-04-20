@@ -38,6 +38,7 @@
 
     <main>
 
+        <!--
         <div class="content-index" id="content-index">
             <p>Compose your alphabet and shuffle it to make sure you don't neglect any sound.</p>
             <p>Go to:</p>
@@ -47,7 +48,7 @@
                 <li><a href="#stringer-container">Syllable stringer</a></li>
             </ul>
         </div>
-        <hr>
+        <hr> -->
 
         <!--
             IDEAS
@@ -55,46 +56,79 @@
             - create words directly. Choose length, then generate word, option to add it to wordlist
         -->
 
-        <!-- ADDER -->
-        <div class="adder" id="add-letters-container">
-            <h1>Alphabet filler</h1>
-            <p><strong>Instructions:</strong> 
-                <br>Write the letter you want to add. 
-                <br>Click the add button.  
-                <br>At the moment you can't remove letters from the array. Refresh the page to empty it.
-            </p>
-            <p class="label-p">A letter here, please</p>
-            <div class="input-box">
-                <input class="add-input" type="text" name="add-letter-input" id="add-letter-input">
-                <button class="add-btn" onclick="addLetter()">Add letter</button>
+
+        <div class="accordion accordion-flush" id="shuffle-string-accordion">
+            <div class="accordion-item">
+              <h1 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Sounds shuffler
+                </button>
+              </h1>
+              <div id="collapseOne" class="item-box accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body item-box-content">
+                    <p><strong>What is this for?</strong></p>
+                    <p>You have your list of chosen sounds to assemble and combine to create words–but inevitably, you focus too much on some and 
+                    not enough on others. Every language has its favored sounds, but it wouldn't do to just forget some of your carefully chosen ones. </p>
+                    <p>Enter your sounds or choose an alphabet and randomly shuffle it to make sure you're considering all sounds when searching for just the right one to add.</p>
+                    <div class="phases">
+                        <!-- ADDER -->
+                        <div class="adder" id="add-letters-container">
+                            <h5>Choose the sounds</h5>
+                            <!--<p><strong>Instructions:</strong> 
+                                <br>Write the letter you want to add. 
+                                <br>Click the add button.  
+                                <br>At the moment you can't remove letters from the array. Refresh the page to empty it.
+                            </p>-->
+                            <div class="input-box">
+                                <input class="add-input" type="text" name="add-letter-input" id="add-letter-input">
+                                <button class="add-btn" onclick="addLetter()">Add letter</button>
+                            </div>
+                            <!--<p class="label-p">A letter here, please</p>-->
+                            <h4>This is your current alphabet:</h4>
+                            <ul>
+                                <li id="ab-list"></li>
+                            </ul>
+                        </div>
+
+                        <!-- SHUFFLER -->
+                        <div class="shuffler" id="alphabet-shuffler-container">
+                            <h5>Shuffle the sounds</h5>
+                        <!--<p><strong>Instructions:</strong> 
+                                <br>Click the button to shuffle the alphabet you've made. 
+                                <br>Note the letters down and make a word. 
+                                <br>This is mainly to make sure no letters are overused and others ignored. -->
+                                <!--<br><strong>NB: this alphabet is already made. You can't change it with the adder.</strong> 
+                            </p> -->
+
+                            <div class="btn">
+                                <button class="shuffle-btn" id="shuffle-btn">Shuffle</button>
+                            </div>
+                            
+                            <div class="word">
+                                <h4>Letter:</h4><h4 class="w1" id="letter"></h4>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>
             </div>
-            <h4>This is your current alphabet:</h4>
-            <ul>
-                <li id="ab-list"></li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <!-- SHUFFLER -->
-        <div class="shuffler" id="alphabet-shuffler-container">
-            <h1>Alphabet shuffler</h1>
-            <p><strong>Instructions:</strong> 
-                <br>Click the button to shuffle the alphabet you've made. 
-                <br>Note the letters down and make a word. 
-                <br>This is mainly to make sure no letters are overused and others ignored.
-                <!--<br><strong>NB: this alphabet is already made. You can't change it with the adder.</strong> -->
-            </p>
-
-            <div class="btn">
-                <button class="shuffle-btn" id="shuffle-btn">Shuffle</button>
+            <div class="accordion-item">
+              <h1 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Syllables stringer
+                </button>
+              </h1>
+              <div id="collapseTwo" class="item-box accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body item-box-content">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
             </div>
-            
-            <div class="word">
-                <h3>Letter:</h3><h3 class="w1" id="letter"></h3>
-            </div>
+          </div>
 
-        </div>
+        
 
         <hr>
 

@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 /*inevitables*/
 *{
     box-sizing: border-box;
@@ -6,18 +8,22 @@
 }
 
 *:focus {
-    outline: none;
+    outline: none !important;
 }
 
 body{
     background-color: rgb(177, 176, 176) !important;
     a{
         text-decoration: none;
-        color: whitesmoke;
+        color: rgb(250, 250, 250);
     }
     a:hover{
-        color: rgb(209, 209, 209);
+        color: $logo-red;
     }
+}
+
+.accordion-item{
+    background-color: rgba(255, 255, 255, 0.527);
 }
 
 // body{
@@ -66,8 +72,10 @@ header{
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
+        text-transform: uppercase;
+        font-family: 'Manrope', sans-serif;
         a{
-            margin: 0px 10px;
+            margin: 0px 20px;
         }
     }
 }
@@ -76,8 +84,9 @@ header{
 // MAIN
 
 main{
-    padding: 20px 50px;
+    //padding: 20px 50px;
     font-family: 'Manrope', sans-serif;
+
     hr{
         margin: 25px 0px;
     }
@@ -85,71 +94,79 @@ main{
         border: 1px solid green;
         height: 100px;
     }
-    .adder{
-        .label-p{
-            margin-bottom: 0;
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-        .input-box{
-            display: flex;
-            flex-direction: row;
-            .add-input{
-                padding: 3px;
-                width: 37px;
-                text-align: center;
-                border-radius: 0;
-                border: 2px solid rgb(97, 14, 86);
-            }
-            .add-btn{
-                width: fit-content;
-                padding: 4px 20px;
-                color: white;
-                background-color: rgb(97, 14, 86);
-                border: none;
-            }
-            
-        }
 
-        h4{
-            margin-top: 20px;
+    ////// accordion
+    .accordion.accordion-flush{
+        width: 85%;
+        margin: auto;
+        
+        .accordion-body.item-box-content{
+            background-color: rgba(255, 255, 255, 0.527);
+            .phases{
+                background-color: rgba(255, 255, 255, 0.527);
+                display: flex !important;
+                flex-direction: row !important;
+                margin-top: 35px;
+                .adder, .shuffler{
+                    width: 50%;
+                }
+                .adder{
+                    .input-box{
+                        display: flex;
+                        flex-direction: row;
+                        .add-input{
+                            padding: 3px;
+                            width: 37px;
+                            text-align: center;
+                            border-radius: 0;
+                            border: 2px solid $dark-violet;
+                        }
+                        .add-btn{
+                            width: fit-content;
+                            padding: 4px 20px;
+                            color: white;
+                            background-color: $dark-violet;
+                            border: none;
+                        }
+                        
+                    }
+                    .label-p{
+                        font-size: 0.9rem;
+                        margin-bottom: 15px;
+                    }
+                    h4{
+                        margin-top: 15px;
+                    }
+                }
+                .shuffler{
+                    .btn{
+                        padding: 0;
+                        .shuffle-btn{
+                            width: fit-content;
+                            padding: 4px 20px;
+                            color: white;
+                            background-color: $dark-violet;
+                            border: none;
+                        }
+                    }
+                    .word{
+                        display: flex;
+                        flex-direction: row;
+                        h4{
+                            margin-top: 15px;
+                            margin-right: 10px;
+                        }
+                        .w1{
+                            color: $dark-green;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
         }
     }
-    .shuffler{
-        .btn{
-            margin: 25px 0px;
-            padding: 0;
-            .shuffle-btn{
-                width: fit-content;
-                padding: 10px 30px;
-                color: white;
-                background-color: rgb(14, 14, 97);
-                border: none;
-            }
-        }
-        .word{
-            margin-bottom: 45px;
-            display: flex;
-            flex-direction: row;
-            h3{
-                margin-right: 8px;
-            }
-            .w1{
-                color: rgb(0, 97, 0);
-                font-weight: bold;
-            }
-            /*
-            .w2{
-                color: rgb(133, 91, 1);
-                font-weight: bold;
-            }
-            .w3{
-                color: rgb(133, 4, 4);
-                font-weight: bold;
-            }
-            */
-        }
-    }
+
+
     .stringer{
         .stringer-phases{
             display: flex;
@@ -170,13 +187,13 @@ main{
                         width: 50px;
                         text-align: center;
                         border-radius: 0;
-                        border: 2px solid rgb(97, 14, 86);
+                        border: 2px solid $dark-violet;
                     }
                     .add-btn, .get-btn{
                         width: fit-content;
                         padding: 4px 20px;
                         color: white;
-                        background-color: rgb(97, 14, 86);
+                        background-color: $dark-violet;
                         border: none;
                     }
                     
@@ -199,7 +216,7 @@ main{
                 ul{
                     list-style: none;
                     li{
-                        color: rgb(0, 97, 0);
+                        color: $dark-green;
                         font-weight: bold;
                         font-size: 1.5rem;
                         margin-left: -29px;
@@ -216,10 +233,13 @@ main{
         z-index: 99; /* Make sure it does not overlap */
         border: none; /* Remove borders */
         outline: none; /* Remove outline */
-        background-color: rgb(95, 19, 19); /* Set a background color */
+        background-color: $logo-red;
         color: white; /* Text color */
         cursor: pointer;
         padding: 10px 30px;
+        a:hover{
+            color: darkgrey;
+        }
     }
 
 }

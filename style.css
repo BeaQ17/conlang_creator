@@ -7,7 +7,7 @@
 }
 
 *:focus {
-  outline: none;
+  outline: none !important;
 }
 
 body {
@@ -16,11 +16,15 @@ body {
 
 body a {
   text-decoration: none;
-  color: whitesmoke;
+  color: #fafafa;
 }
 
 body a:hover {
-  color: #d1d1d1;
+  color: #610000;
+}
+
+.accordion-item {
+  background-color: rgba(255, 255, 255, 0.527);
 }
 
 header {
@@ -78,14 +82,15 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 0px;
+  text-transform: uppercase;
+  font-family: 'Manrope', sans-serif;
 }
 
 header nav a {
-  margin: 0px 10px;
+  margin: 0px 20px;
 }
 
 main {
-  padding: 20px 50px;
   font-family: 'Manrope', sans-serif;
 }
 
@@ -98,13 +103,32 @@ main .test {
   height: 100px;
 }
 
-main .adder .label-p {
-  margin-bottom: 0;
-  margin-top: 10px;
-  font-size: 0.9rem;
+main .accordion.accordion-flush {
+  width: 85%;
+  margin: auto;
 }
 
-main .adder .input-box {
+main .accordion.accordion-flush .accordion-body.item-box-content {
+  background-color: rgba(255, 255, 255, 0.527);
+}
+
+main .accordion.accordion-flush .accordion-body.item-box-content .phases {
+  background-color: rgba(255, 255, 255, 0.527);
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  margin-top: 35px;
+}
+
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder, main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler {
+  width: 50%;
+}
+
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder .input-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,45 +138,48 @@ main .adder .input-box {
           flex-direction: row;
 }
 
-main .adder .input-box .add-input {
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder .input-box .add-input {
   padding: 3px;
   width: 37px;
   text-align: center;
   border-radius: 0;
-  border: 2px solid #610e56;
+  border: 2px solid #660459;
 }
 
-main .adder .input-box .add-btn {
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder .input-box .add-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 4px 20px;
   color: white;
-  background-color: #610e56;
+  background-color: #660459;
   border: none;
 }
 
-main .adder h4 {
-  margin-top: 20px;
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder .label-p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
 }
 
-main .shuffler .btn {
-  margin: 25px 0px;
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder h4 {
+  margin-top: 15px;
+}
+
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .btn {
   padding: 0;
 }
 
-main .shuffler .btn .shuffle-btn {
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .btn .shuffle-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px 30px;
+  padding: 4px 20px;
   color: white;
-  background-color: #0e0e61;
+  background-color: #660459;
   border: none;
 }
 
-main .shuffler .word {
-  margin-bottom: 45px;
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .word {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,24 +187,15 @@ main .shuffler .word {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  /*
-            .w2{
-                color: rgb(133, 91, 1);
-                font-weight: bold;
-            }
-            .w3{
-                color: rgb(133, 4, 4);
-                font-weight: bold;
-            }
-            */
 }
 
-main .shuffler .word h3 {
-  margin-right: 8px;
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .word h4 {
+  margin-top: 15px;
+  margin-right: 10px;
 }
 
-main .shuffler .word .w1 {
-  color: #006100;
+main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .word .w1 {
+  color: #056305;
   font-weight: bold;
 }
 
@@ -217,7 +235,7 @@ main .stringer .stringer-phases .phase-1 .input-box .add-input, main .stringer .
   width: 50px;
   text-align: center;
   border-radius: 0;
-  border: 2px solid #610e56;
+  border: 2px solid #660459;
 }
 
 main .stringer .stringer-phases .phase-1 .input-box .add-btn, main .stringer .stringer-phases .phase-1 .input-box .get-btn, main .stringer .stringer-phases .phase-2 .input-box .add-btn, main .stringer .stringer-phases .phase-2 .input-box .get-btn {
@@ -226,7 +244,7 @@ main .stringer .stringer-phases .phase-1 .input-box .add-btn, main .stringer .st
   width: fit-content;
   padding: 4px 20px;
   color: white;
-  background-color: #610e56;
+  background-color: #660459;
   border: none;
 }
 
@@ -249,7 +267,7 @@ main .stringer .stringer-phases .phase-2 ul {
 }
 
 main .stringer .stringer-phases .phase-2 ul li {
-  color: #006100;
+  color: #056305;
   font-weight: bold;
   font-size: 1.5rem;
   margin-left: -29px;
@@ -268,12 +286,15 @@ main .scroll-to-top {
   /* Remove borders */
   outline: none;
   /* Remove outline */
-  background-color: #5f1313;
-  /* Set a background color */
+  background-color: #610000;
   color: white;
   /* Text color */
   cursor: pointer;
   padding: 10px 30px;
+}
+
+main .scroll-to-top a:hover {
+  color: darkgrey;
 }
 
 footer {

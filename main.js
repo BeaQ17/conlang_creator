@@ -87,47 +87,10 @@ function getSyllables(){
     }
     console.log(newWord);
     let wordElement = document.getElementById("new-word-item"); //get the li element
-    wordElement.innerHTML = newWord.join(""); //put the word in a li element without ,commas
-    //return newWord;
+    wordElement.innerHTML = newWord.join(""); //put the word in a li element without commas
 }
 
 
-/*
-    for (i=0; i<=amount.value; i++){
-        randomSyllable = userSyllables[Math.floor(Math.random() * userSyllables.length-1)];
-        newWord.push(randomSyllable);
-    }
-    console.log(newWord);
-    return newWord.join("");
-    
-    check if input is a number
-   if (isNaN(amount.value)){
-        alert("You must choose a number");
-        document.getElementById("amount-syllable-input").value = "";
-    } else {
-        
-    }*/
-
-
-/*var arr = [ 1, 2, 3, 4, 5 ];
-var random = arr[Math.floor(Math.random() * arr.length)];
-console.log("Random:", random);*/
-
-
-/*
-function randCol() {
-    var colArr = [];
-    var colors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e","f"];
-    for (var i = 0; i < 6; i++) {
-      var rand = colors[Math.floor(Math.random() * 16)];
-      colArr.push(rand);
-    }
-    return "#" + colArr.join("")
-  }
-                  
-  function chngClr() {
-   document.body.style.background = randCol();
-  }*/
 
 
 
