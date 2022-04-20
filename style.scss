@@ -60,6 +60,16 @@ header{
         text-align: center;
         font-family: 'Cinzel', serif;
     }
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+        a{
+            margin: 0px 10px;
+        }
+    }
 }
 
 
@@ -125,7 +135,7 @@ main{
                 margin-right: 8px;
             }
             .w1{
-                color: rgb(133, 4, 4);
+                color: rgb(0, 97, 0);
                 font-weight: bold;
             }
             /*
@@ -134,7 +144,7 @@ main{
                 font-weight: bold;
             }
             .w3{
-                color: rgb(0, 97, 0);
+                color: rgb(133, 4, 4);
                 font-weight: bold;
             }
             */
@@ -155,14 +165,14 @@ main{
                 .input-box{
                     display: flex;
                     flex-direction: row;
-                    .add-input{
+                    .add-input, .get-input{
                         padding: 3px;
                         width: 50px;
                         text-align: center;
                         border-radius: 0;
                         border: 2px solid rgb(97, 14, 86);
                     }
-                    .add-btn{
+                    .add-btn, .get-btn{
                         width: fit-content;
                         padding: 4px 20px;
                         color: white;
@@ -177,6 +187,24 @@ main{
             }
             .phase-1{
                 border-right: 1px dotted rgb(53, 52, 52);
+            }
+            .phase-2{
+                .input-box{
+                    input{
+                        width: 35px;
+                        text-align: center;
+                        border: none;
+                    }
+                }
+                ul{
+                    list-style: none;
+                    li{
+                        color: rgb(0, 97, 0);
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        margin-left: -29px;
+                    }
+                }
             }
         }
     }

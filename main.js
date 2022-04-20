@@ -69,16 +69,65 @@ function addSyllable(){
     //display list of syllables on screen
     let syllableList = document.getElementById("syllable-list"); //get the li element
     syllableList.innerHTML = userSyllables.join("<li>"); //put the syllable in a new li element
-
+    console.log(userSyllables);
 }
 
-//choose amount of syllables
-let amount = document.getElementById("amount-syllable-input").value;
 
 //shuffle and pick syllables
-const n = amount;
-const sample = items
-  .map(x => ({ x, r: Math.random() }))
-  .sort((a, b) => a.r - b.r)
-  .map(a => a.x)
-  .slice(0, n);
+function getSyllables(){
+    //choose amount of syllables
+    let amount = document.getElementById("amount-syllable-input").value;
+    console.log(amount);
+    //define empty array for word
+    newWord = []; 
+    //do shuffling and create word
+    for(i=0; i<amount; i++){
+    randomSyllable = userSyllables[Math.floor(Math.random() * userSyllables.length)];
+    newWord.push(randomSyllable);
+    }
+    console.log(newWord);
+    let wordElement = document.getElementById("new-word-item"); //get the li element
+    wordElement.innerHTML = newWord.join(""); //put the word in a li element without ,commas
+    //return newWord;
+}
+
+
+/*
+    for (i=0; i<=amount.value; i++){
+        randomSyllable = userSyllables[Math.floor(Math.random() * userSyllables.length-1)];
+        newWord.push(randomSyllable);
+    }
+    console.log(newWord);
+    return newWord.join("");
+    
+    check if input is a number
+   if (isNaN(amount.value)){
+        alert("You must choose a number");
+        document.getElementById("amount-syllable-input").value = "";
+    } else {
+        
+    }*/
+
+
+/*var arr = [ 1, 2, 3, 4, 5 ];
+var random = arr[Math.floor(Math.random() * arr.length)];
+console.log("Random:", random);*/
+
+
+/*
+function randCol() {
+    var colArr = [];
+    var colors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e","f"];
+    for (var i = 0; i < 6; i++) {
+      var rand = colors[Math.floor(Math.random() * 16)];
+      colArr.push(rand);
+    }
+    return "#" + colArr.join("")
+  }
+                  
+  function chngClr() {
+   document.body.style.background = randCol();
+  }*/
+
+
+

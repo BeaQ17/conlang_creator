@@ -28,7 +28,12 @@
         <a href="https://ko-fi.com/allegorisapps" target="_blank">
         <img id="hero-title" src="./imgs/red_logo.png" alt="allegoris red logo">
         <p>From Allegoris</p> </a> <!-- leads to allegoris kofi -->
-        <h1>alphabet handler</h1> <!--og title: Conlang Creator-->
+        <h1>language handler</h1> <!--og title: Conlang Creator-->
+        <nav>
+            <a href="index.html">Shuffle and String</a>
+            <a href="">My languages</a>
+            <a href="">Resources</a>
+        </nav>
     </header>
 
     <main>
@@ -91,14 +96,6 @@
 
         </div>
 
-        <!--
-        <div class="list">
-            <h5>Remember:</h5>
-            <p>dʒ = j</p>
-            <p>t͡ʃ = "sweet" c</p>
-            <p>ʃ = sh</p>
-        </div> -->
-
         <hr>
 
         <!-- STRINGER -->
@@ -122,14 +119,21 @@
                         <input class="add-input" type="text" name="add-syllable-input" id="add-syllable-input">
                         <button class="add-btn" onclick="addSyllable()">Add syllable</button>
                     </div>
-                    <h4>This is your current syllables list:</h4>
+                    <h4>This is your syllables list:</h4>
                     <ul>
                         <li id="syllable-list"></li>
                     </ul>
                 </div>
                 <div class="phase-2">
-                    <p class="label-p">Choose the amount of syllables to display</p>
-                    <input class="add-input" type="text" name="amount-syllable-input" id="amount-syllable-input">
+                    <p class="label-p">Choose amount of syllables</p>
+                    <div class="input-box">
+                        <input type="text" name="amount-syllable-input" id="amount-syllable-input" class="get-input">
+                        <button onclick="getSyllables()" class="get-btn">Get new word</button>
+                    </div>
+                    <h4>This is your word:</h4>
+                    <ul>
+                        <li id="new-word-item"></li>
+                    </ul>
                 </div>
             </div>
         </div>

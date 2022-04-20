@@ -63,6 +63,27 @@ header h1 {
   font-family: 'Cinzel', serif;
 }
 
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+}
+
+header nav a {
+  margin: 0px 10px;
+}
+
 main {
   padding: 20px 50px;
   font-family: 'Manrope', sans-serif;
@@ -145,7 +166,7 @@ main .shuffler .word {
                 font-weight: bold;
             }
             .w3{
-                color: rgb(0, 97, 0);
+                color: rgb(133, 4, 4);
                 font-weight: bold;
             }
             */
@@ -156,7 +177,7 @@ main .shuffler .word h3 {
 }
 
 main .shuffler .word .w1 {
-  color: #850404;
+  color: #006100;
   font-weight: bold;
 }
 
@@ -191,7 +212,7 @@ main .stringer .stringer-phases .phase-1 .input-box, main .stringer .stringer-ph
           flex-direction: row;
 }
 
-main .stringer .stringer-phases .phase-1 .input-box .add-input, main .stringer .stringer-phases .phase-2 .input-box .add-input {
+main .stringer .stringer-phases .phase-1 .input-box .add-input, main .stringer .stringer-phases .phase-1 .input-box .get-input, main .stringer .stringer-phases .phase-2 .input-box .add-input, main .stringer .stringer-phases .phase-2 .input-box .get-input {
   padding: 3px;
   width: 50px;
   text-align: center;
@@ -199,7 +220,7 @@ main .stringer .stringer-phases .phase-1 .input-box .add-input, main .stringer .
   border: 2px solid #610e56;
 }
 
-main .stringer .stringer-phases .phase-1 .input-box .add-btn, main .stringer .stringer-phases .phase-2 .input-box .add-btn {
+main .stringer .stringer-phases .phase-1 .input-box .add-btn, main .stringer .stringer-phases .phase-1 .input-box .get-btn, main .stringer .stringer-phases .phase-2 .input-box .add-btn, main .stringer .stringer-phases .phase-2 .input-box .get-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -215,6 +236,23 @@ main .stringer .stringer-phases .phase-1 h4, main .stringer .stringer-phases .ph
 
 main .stringer .stringer-phases .phase-1 {
   border-right: 1px dotted #353434;
+}
+
+main .stringer .stringer-phases .phase-2 .input-box input {
+  width: 35px;
+  text-align: center;
+  border: none;
+}
+
+main .stringer .stringer-phases .phase-2 ul {
+  list-style: none;
+}
+
+main .stringer .stringer-phases .phase-2 ul li {
+  color: #006100;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: -29px;
 }
 
 main .scroll-to-top {
