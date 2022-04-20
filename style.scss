@@ -1,5 +1,8 @@
 @import "_variables.scss";
+@import "_commonClasses.scss";
 @use "_variables.scss"; //in case import gets deprecated
+@use "_commonClasses.scss";
+
 
 /*inevitables*/
 *{
@@ -14,6 +17,7 @@
 
 body{
     background-color: $light-grey !important;
+    min-height: 100vh;
     a{
         text-decoration: none;
         color: rgb(250, 250, 250);
@@ -21,10 +25,6 @@ body{
     a:hover{
         color: $logo-red;
     }
-}
-
-.accordion-item{
-    background-color: rgba(255, 255, 255, 0.527);
 }
 
 // body{
@@ -48,7 +48,8 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 25px 0;
+    padding-top: 25px;
+    background-color: $logo-grey;
     a{
         color: black;
         text-align: center;
@@ -88,46 +89,59 @@ main{
     //padding: 20px 50px;
     font-family: 'Manrope', sans-serif;
 
-    hr{
+    /*hr{
         margin: 25px 0px;
     }
     .test{
         border: 1px solid green;
         height: 100px;
-    }
+    } */
 
     ////// accordion
     .accordion.accordion-flush{
         width: 85%;
         margin: auto;
+        margin-top: 100px;
+        
+
+        .accordion-button{
+            background-color: $light-grey;
+            border-radius: 0 !important;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+        .accordion-button:not(.collapsed){
+            color: $logo-red;
+        }
+        .accordion-button::after {
+            display: none;
+         }
+        //this to get the light blue outline away in google
+        button:focus:not(:focus-visible) {
+            outline: 0 !important;
+        } 
+        .accordion-button:focus {
+            z-index: 3;
+            border-color: transparent;
+            outline: 0;
+            box-shadow: none;
+        }
+
+
         
         .accordion-body.item-box-content{
             background-color: $transparent-white;
             .phases{
                 background-color: $transparent-white;
-                display: flex !important;
-                flex-direction: row !important;
                 margin-top: 35px;
-                .adder, .shuffler{
-                    width: 50%;
-                }
+
                 .adder{
                     .input-box{
                         display: flex;
                         flex-direction: row;
                         .add-input{
-                            padding: 3px;
-                            width: 37px;
-                            text-align: center;
-                            border-radius: 0;
-                            border: 2px solid $dark-violet;
-                        }
-                        .add-btn{
-                            width: fit-content;
-                            padding: 4px 20px;
-                            color: white;
-                            background-color: $dark-violet;
-                            border: none;
+                            width: 40px;
                         }
                         
                     }
@@ -142,13 +156,6 @@ main{
                 .shuffler{
                     .btn{
                         padding: 0;
-                        .shuffle-btn{
-                            width: fit-content;
-                            padding: 5px 20px;
-                            color: white;
-                            background-color: $dark-violet;
-                            border: none;
-                        }
                     }
                     .word{
                         display: flex;
@@ -170,34 +177,13 @@ main{
 
     .stringer{
         .stringer-phases{
-            display: flex;
-            flex-direction: row;
             .phase-1, .phase-2{
-                width: 50%;
-                padding: 15px;
-                .label-p{
-                    margin-bottom: 0;
-                    margin-top: 10px;
-                    font-size: 0.9rem;
-                }
                 .input-box{
                     display: flex;
                     flex-direction: row;
                     .add-input, .get-input{
-                        padding: 3px;
                         width: 50px;
-                        text-align: center;
-                        border-radius: 0;
-                        border: 2px solid $dark-violet;
                     }
-                    .add-btn, .get-btn{
-                        width: fit-content;
-                        padding: 4px 20px;
-                        color: white;
-                        background-color: $dark-violet;
-                        border: none;
-                    }
-                    
                 }
                 h4{
                     margin-top: 20px;
@@ -205,15 +191,10 @@ main{
             }
             .phase-1{
                 border-right: 1px dotted $dark-grey;
+                padding: 0 15px 0 0;
             }
             .phase-2{
-                .input-box{
-                    input{
-                        width: 35px;
-                        text-align: center;
-                        border: none;
-                    }
-                }
+                padding: 0 0 0 15px;
                 ul{
                     list-style: none;
                     li{
@@ -227,33 +208,41 @@ main{
         }
     }
 
+    //scroll to top btn
+    /*
     .scroll-to-top{
-        position: fixed; /* Fixed/sticky position */
-        bottom: 20px; /* Place the button at the bottom of the page */
-        right: 30px; /* Place the button 30px from the right */
-        z-index: 99; /* Make sure it does not overlap */
-        border: none; /* Remove borders */
-        outline: none; /* Remove outline */
+        position: fixed; 
+        bottom: 20px; 
+        right: 30px; 
+        z-index: 99; 
+        border: none; 
+        outline: none; 
         background-color: $logo-red;
-        color: white; /* Text color */
+        color: white; 
         cursor: pointer;
         padding: 10px 30px;
         a:hover{
             color: $logo-grey;
         }
-    }
+    }*/
 
 }
 
-// FOOTER
+////////////// FOOTER //////////////
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    padding: 15px 0px;
     background-color: $logo-grey;
     color: whitesmoke;
+    bottom: 0;
+    top: 100%;
+    width: 100%;
+    margin-top: 50px;
+    position: sticky;
+    
     p{
         margin-bottom: 10px;
         font-size: 0.85rem;

@@ -1,0 +1,30 @@
+//BUTTONS
+.purple_btn{
+    min-width: fit-content;
+    padding: 4px 20px;
+    color: white;
+    background-color: $dark-violet;
+    border: none;
+}
+
+
+//TEXT
+.smaller-p{
+    font-size: 0.945rem;
+}
+
+
+//INPUT
+.gen-text-input{
+    text-align: center;
+    border-radius: 0;
+    border: 2px solid $dark-violet;
+    padding: 3px;
+}
+
+
+//ELEMENTS
+.row{
+    margin: 0 !important;
+    padding: 0 !important;
+}

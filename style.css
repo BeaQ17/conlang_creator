@@ -1,4 +1,31 @@
+.purple_btn {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 4px 20px;
+  color: white;
+  background-color: #660432;
+  border: none;
+}
+
+.smaller-p {
+  font-size: 0.945rem;
+}
+
+.gen-text-input {
+  text-align: center;
+  border-radius: 0;
+  border: 2px solid #660432;
+  padding: 3px;
+}
+
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 @use "_variables.scss";
+@use "_commonClasses.scss";
 /*inevitables*/
 * {
   -webkit-box-sizing: border-box;
@@ -13,6 +40,7 @@
 
 body {
   background-color: #bababa !important;
+  min-height: 100vh;
 }
 
 body a {
@@ -22,10 +50,6 @@ body a {
 
 body a:hover {
   color: #610000;
-}
-
-.accordion-item {
-  background-color: rgba(255, 255, 255, 0.527);
 }
 
 header {
@@ -43,7 +67,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 25px 0;
+  padding-top: 25px;
+  background-color: #707070;
 }
 
 header a {
@@ -93,20 +118,67 @@ header nav a {
 
 main {
   font-family: 'Manrope', sans-serif;
-}
-
-main hr {
-  margin: 25px 0px;
-}
-
-main .test {
-  border: 1px solid green;
-  height: 100px;
+  /*hr{
+        margin: 25px 0px;
+    }
+    .test{
+        border: 1px solid green;
+        height: 100px;
+    } */
+  /*
+    .scroll-to-top{
+        position: fixed; 
+        bottom: 20px; 
+        right: 30px; 
+        z-index: 99; 
+        border: none; 
+        outline: none; 
+        background-color: $logo-red;
+        color: white; 
+        cursor: pointer;
+        padding: 10px 30px;
+        a:hover{
+            color: $logo-grey;
+        }
+    }*/
 }
 
 main .accordion.accordion-flush {
   width: 85%;
   margin: auto;
+  margin-top: 100px;
+}
+
+main .accordion.accordion-flush .accordion-button {
+  background-color: #bababa;
+  border-radius: 0 !important;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .accordion.accordion-flush .accordion-button:not(.collapsed) {
+  color: #610000;
+}
+
+main .accordion.accordion-flush .accordion-button::after {
+  display: none;
+}
+
+main .accordion.accordion-flush button:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+main .accordion.accordion-flush .accordion-button:focus {
+  z-index: 3;
+  border-color: transparent;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content {
@@ -115,18 +187,7 @@ main .accordion.accordion-flush .accordion-body.item-box-content {
 
 main .accordion.accordion-flush .accordion-body.item-box-content .phases {
   background-color: #ffffff86;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: row !important;
-          flex-direction: row !important;
   margin-top: 35px;
-}
-
-main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder, main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler {
-  width: 50%;
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder .input-box {
@@ -140,21 +201,7 @@ main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder 
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder .input-box .add-input {
-  padding: 3px;
-  width: 37px;
-  text-align: center;
-  border-radius: 0;
-  border: 2px solid #660459;
-}
-
-main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder .input-box .add-btn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 4px 20px;
-  color: white;
-  background-color: #660459;
-  border: none;
+  width: 40px;
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder .label-p {
@@ -168,16 +215,6 @@ main .accordion.accordion-flush .accordion-body.item-box-content .phases .adder 
 
 main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .btn {
   padding: 0;
-}
-
-main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .btn .shuffle-btn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 5px 20px;
-  color: white;
-  background-color: #660459;
-  border: none;
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .word {
@@ -200,27 +237,6 @@ main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffl
   font-weight: bold;
 }
 
-main .stringer .stringer-phases {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-main .stringer .stringer-phases .phase-1, main .stringer .stringer-phases .phase-2 {
-  width: 50%;
-  padding: 15px;
-}
-
-main .stringer .stringer-phases .phase-1 .label-p, main .stringer .stringer-phases .phase-2 .label-p {
-  margin-bottom: 0;
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
-
 main .stringer .stringer-phases .phase-1 .input-box, main .stringer .stringer-phases .phase-2 .input-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,21 +248,7 @@ main .stringer .stringer-phases .phase-1 .input-box, main .stringer .stringer-ph
 }
 
 main .stringer .stringer-phases .phase-1 .input-box .add-input, main .stringer .stringer-phases .phase-1 .input-box .get-input, main .stringer .stringer-phases .phase-2 .input-box .add-input, main .stringer .stringer-phases .phase-2 .input-box .get-input {
-  padding: 3px;
   width: 50px;
-  text-align: center;
-  border-radius: 0;
-  border: 2px solid #660459;
-}
-
-main .stringer .stringer-phases .phase-1 .input-box .add-btn, main .stringer .stringer-phases .phase-1 .input-box .get-btn, main .stringer .stringer-phases .phase-2 .input-box .add-btn, main .stringer .stringer-phases .phase-2 .input-box .get-btn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 4px 20px;
-  color: white;
-  background-color: #660459;
-  border: none;
 }
 
 main .stringer .stringer-phases .phase-1 h4, main .stringer .stringer-phases .phase-2 h4 {
@@ -255,12 +257,11 @@ main .stringer .stringer-phases .phase-1 h4, main .stringer .stringer-phases .ph
 
 main .stringer .stringer-phases .phase-1 {
   border-right: 1px dotted #353434;
+  padding: 0 15px 0 0;
 }
 
-main .stringer .stringer-phases .phase-2 .input-box input {
-  width: 35px;
-  text-align: center;
-  border: none;
+main .stringer .stringer-phases .phase-2 {
+  padding: 0 0 0 15px;
 }
 
 main .stringer .stringer-phases .phase-2 ul {
@@ -272,30 +273,6 @@ main .stringer .stringer-phases .phase-2 ul li {
   font-weight: bold;
   font-size: 1.5rem;
   margin-left: -29px;
-}
-
-main .scroll-to-top {
-  position: fixed;
-  /* Fixed/sticky position */
-  bottom: 20px;
-  /* Place the button at the bottom of the page */
-  right: 30px;
-  /* Place the button 30px from the right */
-  z-index: 99;
-  /* Make sure it does not overlap */
-  border: none;
-  /* Remove borders */
-  outline: none;
-  /* Remove outline */
-  background-color: #610000;
-  color: white;
-  /* Text color */
-  cursor: pointer;
-  padding: 10px 30px;
-}
-
-main .scroll-to-top a:hover {
-  color: #707070;
 }
 
 footer {
@@ -312,9 +289,15 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100px;
+  padding: 15px 0px;
   background-color: #707070;
   color: whitesmoke;
+  bottom: 0;
+  top: 100%;
+  width: 100%;
+  margin-top: 50px;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 footer p {
