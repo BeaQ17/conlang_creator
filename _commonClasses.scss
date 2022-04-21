@@ -19,6 +19,9 @@
     background-color: $dark-violet;
     border: none;
 }
+.current{
+    color: $logo-red;
+}
 
 
 //TEXT
@@ -70,11 +73,17 @@ hr{
 }
 
 .gen-box{
-    border: 1px solid $dark-grey;
-    margin: 15px;
     padding: 12px;
+    border: 1px solid $dark-grey;
+    margin-bottom: 20px;
 }
 
+.res-link{
+    color: black;
+}
+.res-link:hover{
+    color: $logo-red;
+}
 
 
 //BODY

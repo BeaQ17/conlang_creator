@@ -33,7 +33,7 @@
         <nav>
             <a href="index.html">Resources</a>
             <a href="vocabularies.html">Vocabularies</a>
-            <a href="alphabets.html">Alphabets</a>
+            <a href="alphabets.html" class="current">Alphabets</a>
             <a href="syllables.html">Syllables</a>
         </nav>
     </header>
@@ -90,6 +90,10 @@
                                         <input class="add-input gen-text-input" type="text" name="add-letter-input" id="add-letter-input">
                                         <button class="purple_btn" onclick="addLetter()">Add letter</button>
                                     </div>
+                                    <p style="margin-top: 1rem;">Or</p>
+                                    <div class="select-list">
+                                        <button class="purple_btn">Choose alphabet</button>
+                                    </div>
                                     <h4>This is your current alphabet:</h4>
                                     <ul>
                                         <li id="ab-list"></li>
@@ -100,7 +104,7 @@
                                 <div class="shuffler col-12 col-md-6" id="alphabet-shuffler-container">
                                     <h5>Shuffle the sounds</h5>
                                     <div class="btn">
-                                        <button class="purple_btn" id="shuffle-btn">Shuffle</button>
+                                        <button class="purple_btn" id="shuffle-btn" onclick="shuffleAlphabet()">Shuffle</button>
                                     </div>
                                     
                                     <div class="word">
@@ -114,7 +118,6 @@
                       </div>
                     </div>
                 </div> <!-- /accordion accordion-flush -->
-                <!-- add button to add alphabet -->
         </div>
 
     </main>

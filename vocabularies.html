@@ -27,12 +27,12 @@
     <header>
         <a href="https://ko-fi.com/allegorisapps" target="_blank" class="head-link">
             <img id="hero-title" src="./imgs/red_logo.png" alt="allegoris red logo">
-            <p>From Allegoris</p> 
+            <p class="logo-p">From Allegoris</p> 
         </a>
         <h1>language handler</h1> 
         <nav>
             <a href="index.html">Resources</a>
-            <a href="vocabularies.html">Vocabularies</a>
+            <a href="vocabularies.html" class="current">Vocabularies</a>
             <a href="alphabets.html">Alphabets</a>
             <a href="syllables.html">Syllables</a>
         </nav>
@@ -69,9 +69,9 @@
         <div class="showcase col-md-9 col-12">
             <!-- hero (lang name + completion status + alphabet and syllables list)-->
             <div class="jumbo">
-                <div class="hero-img">
-                    <img src="#" alt="phonetic transcription of alphabet"> <!-- source: the img of the alphabet linked-->
-                </div>
+                <!--<div class="hero-img">
+                    <img src="#" alt="phonetic transcription of alphabet">  
+                </div> --> <!-- source: the img of the alphabet linked -->
                 <div class="hero-text">
                     <h1>Language name</h1>
                     <p><strong>Completion status:</strong> Non complete</p>
@@ -93,76 +93,19 @@
             <div class="sections-list row">
                 <!-- individual section -->
                 <div class="section-item col-12 col-md-6">
-                    <h4>Section 1 title</h4>
-                    <div class="notes">
-                        <p><strong>Notes</strong></p>
-                        <!-- accordion -->
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus accusamus ducimus sunt magnam doloribus 
-                            reiciendis architecto quam corrupti voluptatum rem!</p>
-                    </div>
-                    <div class="wordlist">
-                        <ul>
-                            <li>Word</li>
-                        </ul>
-                    </div>
-                    <hr>
-                </div>
-                <!-- individual section -->
-                <div class="section-item col-12 col-md-6">
-                    <h4>Section 1 title</h4>
-                    <div class="notes">
-                        <p><strong>Notes</strong></p>
-                        <!-- accordion -->
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus accusamus ducimus sunt magnam doloribus 
-                            reiciendis architecto quam corrupti voluptatum rem!</p>
-                    </div>
-                    <div class="wordlist">
-                        <ul>
-                            <li>Word</li>
-                        </ul>
-                    </div>
-                    <hr>
-                </div>
-                <!-- individual section -->
-                <div class="section-item col-12 col-md-6">
-                    <h4>Section 1 title</h4>
-                    <div class="notes">
-                        <p><strong>Notes</strong></p>
-                        <!-- accordion -->
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus accusamus ducimus sunt magnam doloribus 
-                            reiciendis architecto quam corrupti voluptatum rem!</p>
-                    </div>
-                    <div class="wordlist">
-                        <ul>
-                            <li>Word</li>
-                        </ul>
-                    </div>
-                    <hr>
-                </div>
-                <!-- individual section -->
-                <div class="section-item col-12 col-md-6">
-                    <h4>Section 1 title</h4>
-                    <div class="notes">
-                        <p><strong>Notes</strong></p>
-                        <!-- accordion -->
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus accusamus ducimus sunt magnam doloribus 
-                            reiciendis architecto quam corrupti voluptatum rem!</p>
-                    </div>
-                    <div class="wordlist">
-                        <ul>
-                            <li>Word</li>
-                        </ul>
-                    </div>
-                    <hr>
-                </div>
-                <!-- individual section -->
-                <div class="section-item col-12 col-md-6">
-                    <h4>Section 1 title</h4>
-                    <div class="notes">
-                        <p><strong>Notes</strong></p>
-                        <!-- accordion -->
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus accusamus ducimus sunt magnam doloribus 
-                            reiciendis architecto quam corrupti voluptatum rem!</p>
+                    <h4>Section title</h4>
+                    <div class="accordion accordion-flush" id="accordionNotes">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header acc-notes-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed acc-notes-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <strong>Notes</strong>
+                            </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fugit deleniti exercitationem dolores soluta quis? 
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, laudantium.</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="wordlist">
                         <ul>
@@ -191,3 +134,7 @@
     
 </body>
 </html>
+
+
+
+

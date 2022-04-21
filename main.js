@@ -36,10 +36,9 @@ function getIndexNumber(min, max){
     return resultOne;
 }
 
-//make the button listen for the click and do the shuffling
-shuffleBtn.addEventListener("click", () => {
+function shuffleAlphabet(){
 
-    /*
+        /*
     //shuffle the ante-alphabet
     let index = getIndexNumber(0, alphabet.length-1); //it is -1 because arrays start counting from 0
     resultOne.innerText = alphabet[index];
@@ -49,8 +48,8 @@ shuffleBtn.addEventListener("click", () => {
     //shuffle the user's alphabet:
     let index = getIndexNumber(0, userAlphabet.length-1); 
     resultOne.innerText = userAlphabet[index];
-    
-});
+
+}
 
 
 
@@ -64,7 +63,7 @@ function addSyllable(){
     let syllable = document.getElementById("add-syllable-input").value; //get user input
     userSyllables.push(syllable); //push input in array
     document.getElementById("add-syllable-input").value = ""; //clear input
-    //console.log(userSyllable); //print array in console
+    console.log(userSyllables); //print array in console
 
     //display list of syllables on screen
     let syllableList = document.getElementById("syllable-list"); //get the li element

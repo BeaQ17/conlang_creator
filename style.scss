@@ -56,13 +56,9 @@ main{
             box-shadow: none;
         }
 
-
-        
         .accordion-body.item-box-content{
-            //background-color: $transparent-white;
             background: transparent;
             .phases{
-                //background-color: $transparent-white;
                 margin-top: 35px;
 
                 .adder{
@@ -187,6 +183,14 @@ main.common-main{
     .section-list{
         .section-item{
             margin-bottom: 25px;
+        }
+
+        .acc-notes-header{
+            height: fit-content;
+            padding: 10px;
+        }
+        .acc-notes-button{
+            font-size: 1rem;
         }
     }
 }
