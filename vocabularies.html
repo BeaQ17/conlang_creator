@@ -43,14 +43,51 @@
 
         <aside class="col-md-3 col-12 bordered-aside">
 
-            <div class="vocab-elements">
-                <h6><i class="fa-solid fa-lock-open" style="margin-right: 7px;"></i>Common sections cheatsheet</h6>
-                <!-- accordion -->
+            <!-- sections cheatsheet accordion -->
+            <!-- SC = Section Cheatsheet -->
+            <div class="accordion accordion-flush" id="accordionSC">
+                <div class="accordion-item">
+                    <!-- accordion button -->
+                    <h2 class="accordion-header" id="flush-headingSC">
+                    <button class="accordion-button collapsed small-accBtn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSC" aria-expanded="false" aria-controls="flush-collapseSC">
+                        <i class="fa-solid fa-chevron-down" style="margin-right: 7px;"></i><strong>Common sections cheatsheet</strong>
+                    </button>
+                    </h2>
+                    <!-- accordion body -->
+                    <div id="flush-collapseSC" class="accordion-collapse collapse" aria-labelledby="flush-headingSC" data-bs-parent="#accordionFlushSC">
+                        <div class="accordion-body section-cheatsheet-body">
+                            <!-- search box -->
+                            <div class="search-section">
+                                <button class="transparent_btn inside_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <input type="text" placeholder="Search sections" class="only-bottom all-width search-input">
+                            </div>
+                            <!-- actual sections -->
+                            <div class="sectionCS-list">
+                                <ul class="style-none">
+                                    <li class="sectionCS-item">
+                                        <div class="sectionCS-item-box">
+                                            <!-- section title -->
+                                            <div class="sectionCS-box-title"><i class="fa-solid fa-puzzle-piece"></i><h4>Section title</h4></div>
+                                            <p style="margin-bottom: 0.4rem;">What the words in this section for?</p>
+                                            <div style="padding-left: 20px;">
+                                                <ul>
+                                                    <li>Word</li>
+                                                    <li>Word</li>
+                                                    <li>Word</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <hr>
     
-            <!-- vocab list -->
+            <!-- vocabs list -->
             <div class="show-box">
                 <div class="add-lang">
                     <input type="text" class="only-bottom vocab-input" placeholder="Write its language's name" title="Use the name of the language the words belong to">
@@ -94,19 +131,21 @@
                 <!-- individual section -->
                 <div class="section-item col-12 col-md-6">
                     <h4>Section title</h4>
-                    <div class="accordion accordion-flush" id="accordionNotes">
+                    <!-- Notes accordion -->
+                    <div class="accordion accordion-flush notes-box" id="accordionNotes">
                         <div class="accordion-item">
-                            <h2 class="accordion-header acc-notes-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed acc-notes-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                <strong>Notes</strong>
+                            <h2 class="accordion-header" id="flush-headingNotes">
+                            <button class="accordion-button collapsed small-accBtn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNotes" aria-expanded="false" aria-controls="flush-collapseNotes">
+                                <i class="fa-solid fa-chevron-down" style="margin-right: 7px;"></i><strong>Notes</strong>
                             </button>
                             </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseNotes" class="accordion-collapse collapse" aria-labelledby="flush-headingNotes" data-bs-parent="#accordionFlushNotes">
                             <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fugit deleniti exercitationem dolores soluta quis? 
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, laudantium.</div>
                             </div>
                         </div>
                     </div>
+                    <!-- word list -->
                     <div class="wordlist">
                         <ul>
                             <li>Word</li>

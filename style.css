@@ -23,11 +23,35 @@
   color: #610000;
 }
 
+.transparent_btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.inside_btn {
+  margin-right: -25px;
+}
+
 .smaller-p {
   font-size: 0.945rem;
 }
 
-.gen-text-input {
+.input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.input-box .gen-text-input {
   text-align: center;
   border-radius: 0;
   border: 2px solid #610000;
@@ -40,6 +64,14 @@
   background-color: transparent;
   color: black;
   margin: 15px 0px;
+}
+
+.all-width {
+  width: 100%;
+}
+
+.search-input {
+  padding-left: 28px;
 }
 
 .row {
@@ -192,7 +224,6 @@ main {
 
 main .accordion.accordion-flush {
   margin: auto;
-  width: 95%;
 }
 
 main .accordion.accordion-flush .accordion-item {
@@ -202,17 +233,32 @@ main .accordion.accordion-flush .accordion-item {
 main .accordion.accordion-flush .accordion-button {
   background: transparent;
   border-radius: 0 !important;
-  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: normal;
+}
+
+main .accordion.accordion-flush .accordion-button.big-accBtn {
+  font-size: 1.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 0;
+}
+
+main .accordion.accordion-flush .accordion-button.small-accBtn {
+  font-size: 1rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
 }
 
 main .accordion.accordion-flush .accordion-button:not(.collapsed) {
   color: #610000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 main .accordion.accordion-flush .accordion-button::after {
@@ -229,6 +275,14 @@ main .accordion.accordion-flush .accordion-button:focus {
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+main .accordion.accordion-flush .accordion-body.section-cheatsheet-body {
+  padding: 0;
+}
+
+main .accordion.accordion-flush .accordion-body.section-cheatsheet-body .search-seaction {
+  width: 100%;
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content {
@@ -328,6 +382,25 @@ main.common-main {
   padding: 25px 15px;
 }
 
+main.common-main .sectionCS-list {
+  margin-top: 15px;
+}
+
+main.common-main .sectionCS-list .sectionCS-box-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.common-main .sectionCS-list .sectionCS-box-title .fa-solid.fa-puzzle-piece {
+  font-size: 1.5rem;
+  margin-right: 6px;
+}
+
 main.common-main .vocab-input {
   width: 209px;
 }
@@ -372,19 +445,12 @@ main.common-main .add-section {
   margin-bottom: 20px;
 }
 
-main.common-main .section-list .section-item {
-  margin-bottom: 25px;
+main.common-main .showcase {
+  padding-left: 20px;
 }
 
-main.common-main .section-list .acc-notes-header {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 10px;
-}
-
-main.common-main .section-list .acc-notes-button {
-  font-size: 1rem;
+main.common-main .showcase .sections-list .section-item .notes-box {
+  margin: 15px 10px;
 }
 
 footer {
@@ -437,4 +503,4 @@ footer .links a {
   font-size: 1.5rem;
   margin: 0px 15px;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=style.css.map */

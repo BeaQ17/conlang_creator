@@ -3,30 +3,17 @@
 @use "_variables.scss"; //in case import gets deprecated
 @use "_commonClasses.scss";
 
-// body{
-//     display: flex;
-//     flex-direction: column;
-//     min-height: 100vh;
-//     background-image: url("../../tm_imgs/viewTMbg.png");
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     position: relative;
-    
-// }
 
 
 // MAIN
 
 main{
-    //padding: 20px 50px;
     font-family: 'Manrope', sans-serif;
 
-    ////// INDEX
+    //accordion
     .accordion.accordion-flush{
         margin: auto;
-        width: 95%;
+        //width: 95%;
 
         .accordion-item{
             background: transparent;
@@ -35,17 +22,29 @@ main{
         .accordion-button{
             background: transparent;
             border-radius: 0 !important;
-            font-size: 1.5rem;
             display: flex;
+            line-height: normal;
+        }
+        //bigger accordion btn for alphabets and syllables
+        .accordion-button.big-accBtn{
+            font-size: 1.5rem;
             justify-content: center;
+            padding-top: 0;
+        }
+        //smaller accordion button for Notes in vocab sections
+        .accordion-button.small-accBtn{
+            font-size: 1rem;
+            justify-content: flex-start;
+            padding: 0;
         }
         .accordion-button:not(.collapsed){
             color: $logo-red;
+            box-shadow: none;
         }
         .accordion-button::after {
             display: none;
          }
-        //this to get the light blue outline away in google
+        //this to get the light blue outline away in google ->
         button:focus:not(:focus-visible) {
             outline: 0 !important;
         } 
@@ -54,13 +53,21 @@ main{
             border-color: transparent;
             outline: 0;
             box-shadow: none;
+        } // <- this to get the light blue outline away in google
+
+        .accordion-body.section-cheatsheet-body{
+            padding: 0;
+            .search-seaction{
+                width: 100%;
+            }
         }
+
 
         .accordion-body.item-box-content{
             background: transparent;
             .phases{
                 margin-top: 35px;
-
+                //add letters/sounds box
                 .adder{
                     .input-box{
                         display: flex;
@@ -78,6 +85,7 @@ main{
                         margin-top: 15px;
                     }
                 }
+                //shuffle letters/sounds box
                 .shuffler{
                     .btn{
                         padding: 0;
@@ -98,6 +106,7 @@ main{
             }
         }
     }
+    //string sounds/syllables box
     .stringer{
         .stringer-phases{
             .phase-1, .phase-2{
@@ -151,9 +160,20 @@ main{
 
 }
 
-////// VOCABULARIES //////
+////// VOCABULARIES specifics //////
 main.common-main{
     padding: 25px 15px;
+    .sectionCS-list{
+        margin-top: 15px;
+        .sectionCS-box-title{
+            display: flex;
+            flex-direction: row;
+            .fa-solid.fa-puzzle-piece{
+                font-size: 1.5rem;
+                margin-right: 6px;
+            }
+        }
+    }
     .vocab-input{
         width: 209px;
     }
@@ -180,19 +200,18 @@ main.common-main{
         align-items: flex-start;
         margin-bottom: 20px;
     }
-    .section-list{
-        .section-item{
-            margin-bottom: 25px;
-        }
-
-        .acc-notes-header{
-            height: fit-content;
-            padding: 10px;
-        }
-        .acc-notes-button{
-            font-size: 1rem;
+    .showcase{
+        padding-left: 20px;
+        .sections-list{
+            .section-item{
+                .notes-box{
+                    margin: 15px 10px;
+                }
+            }
         }
     }
+
+
 }
 
 ////////////// FOOTER //////////////
@@ -225,3 +244,8 @@ footer{
         }
     }
 }
+
+
+
+
+///// MEDIA QUERIES

@@ -22,6 +22,16 @@
 .current{
     color: $logo-red;
 }
+.transparent_btn{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+.inside_btn{
+    margin-right: -25px;
+}
 
 
 //TEXT
@@ -31,19 +41,30 @@
 
 
 //INPUT
-.gen-text-input{
-    text-align: center;
-    border-radius: 0;
-    border: 2px solid $dark-violet;
-    padding: 3px;
-}
+.input-box{
+    display: flex;
+    flex-direction: row;
+    .gen-text-input{
+        text-align: center;
+        border-radius: 0;
+        border: 2px solid $dark-violet;
+        padding: 3px;
+    }
 
+    // + purple_btn
+}
 .only-bottom{
     border: none;
     border-bottom: 2px solid $dark-grey;
     background-color: transparent;
     color: black;
     margin: 15px 0px;
+}
+.all-width{
+    width: 100%;
+}
+.search-input{
+    padding-left: 28px;
 }
 
 
@@ -147,3 +168,8 @@ header{
         }
     }
 }
+
+
+
+
+//// MEDIA QUERIES
