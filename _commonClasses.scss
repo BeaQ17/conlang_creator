@@ -93,10 +93,13 @@ hr{
     border-right: 1px dotted $dark-grey;
 }
 
-.gen-box{
+.exp-box{
     padding: 12px;
     border: 1px solid $dark-grey;
     margin-bottom: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
 }
 
 .res-link{
@@ -158,6 +161,7 @@ header{
     nav{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
@@ -173,3 +177,21 @@ header{
 
 
 //// MEDIA QUERIES
+
+//phone breakpoint
+//until the screen is smaller than 576px
+/*
+@media screen and (max-width: $bp-phone){
+    .bordered-aside{
+        border: none;
+    }
+}
+*/
+
+//when col-9 + col-3 becomes all col-12
+// = at 767px
+@media screen and (max-width: $bp-tablet){
+    .bordered-aside{
+        border: none;
+    }
+}

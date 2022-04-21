@@ -43,9 +43,52 @@
 
         <aside class="col-md-3 col-12 bordered-aside">
 
-            <div class="sounds-elements">
-                <h6><i class="fa-solid fa-lock-open" style="margin-right: 7px;"></i>Common sounds cheatsheet</h6>
-                <!-- accordion -->
+            <!-- common sounds links accordion -->
+            <div class="accordion accordion-flush" id="accordionSounds">
+                <div class="accordion-item">
+                    <!-- accordion button -->
+                    <h2 class="accordion-header" id="flush-headingSounds">
+                    <button class="accordion-button collapsed small-accBtn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSounds" aria-expanded="false" aria-controls="flush-collapseSounds">
+                        <i class="fa-solid fa-chevron-down" style="margin-right: 7px;"></i><strong>IPA sounds cheatsheet</strong>
+                    </button>
+                    </h2>
+                    <!-- accordion body -->
+                    <div id="flush-collapseSounds" class="accordion-collapse collapse" aria-labelledby="flush-headingSounds" data-bs-parent="#accordionFlushSounds">
+                        <div class="accordion-body section-sounds-body">
+                            <!-- search box 
+                            <div class="search-section">
+                                <button class="transparent_btn inside_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <input type="text" placeholder="Search sections" class="only-bottom all-width search-input">
+                            </div> -->
+                            <!-- actual sections -->
+                            <div class="info">
+                                <p><strong>What does IPA stand for?</strong></p>
+                                <p>Several things, actually, but in this case the important ones are <strong><em><a href="https://www.internationalphoneticalphabet.org/ipa-sounds/ipa-chart-with-sounds/">International
+                                    Phonetic Alphabet</a></em></strong> and <strong><em><a href="https://www.internationalphoneticassociation.org/" target="_blank">International Phonetic Association</a></em></strong>.
+                                    <br>The IPAlphabet is a collection of sounds whose pronunciation and transcription 
+                                    is agreed upon by everyone. It allows people to study them and then know how to
+                                    pronounce any word whose phonetic transcription is available.
+                                    <br>Phonetic transcription is the visual representation of speech sounds, called phonemes, through symbols.
+                                </p>
+                            </div>
+                            <div class="section-list">
+                                <ul class="style-none">
+                                    <li class="section-item">
+                                        <div class="section-item-box">
+                                            <!-- section title -->
+                                            <div class="section-box-title"><i class="fa-solid fa-puzzle-piece"></i><h4>IPA cheatsheet</h4></div>
+                                            <p style="margin-bottom: 0.4rem;">You can see here the IPA symbol and which letter is commonly used for it.
+                                            <br>The same letter can correspond to several sounds because they indicate how different native speakers of different
+                                             languages pronounce that letter.
+                                            <br>To hear the sound of each phoneme, click on it.</p>
+                                            <!-- embed audio with the tag like you would for an img. Add the sounds in the files.-->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <hr>

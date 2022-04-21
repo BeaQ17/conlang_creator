@@ -1,3 +1,9 @@
+/*bootstrap 
+col-xs = screen < 768px
+col-sm = screen >= 768px
+col-md = screen >= 992px
+col-lg = screen >= 1200px
+*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -100,10 +106,13 @@ hr {
   border-right: 1px dotted #353434;
 }
 
-.gen-box {
+.exp-box {
   padding: 12px;
   border: 1px solid #353434;
   margin-bottom: 20px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
 .res-link {
@@ -185,6 +194,8 @@ header nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -198,6 +209,19 @@ header nav {
 
 header nav a {
   margin: 0px 20px;
+}
+
+/*
+@media screen and (max-width: $bp-phone){
+    .bordered-aside{
+        border: none;
+    }
+}
+*/
+@media screen and (max-width: 767px) {
+  .bordered-aside {
+    border: none;
+  }
 }
 
 @use "_variables.scss";
@@ -382,11 +406,11 @@ main.common-main {
   padding: 25px 15px;
 }
 
-main.common-main .sectionCS-list {
+main.common-main .section-list {
   margin-top: 15px;
 }
 
-main.common-main .sectionCS-list .sectionCS-box-title {
+main.common-main .section-list .section-box-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,13 +420,9 @@ main.common-main .sectionCS-list .sectionCS-box-title {
           flex-direction: row;
 }
 
-main.common-main .sectionCS-list .sectionCS-box-title .fa-solid.fa-puzzle-piece {
+main.common-main .section-list .section-box-title .fa-solid.fa-puzzle-piece {
   font-size: 1.5rem;
   margin-right: 6px;
-}
-
-main.common-main .vocab-input {
-  width: 209px;
 }
 
 main.common-main .show-box .show-list {

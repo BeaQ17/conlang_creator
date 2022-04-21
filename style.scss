@@ -163,9 +163,9 @@ main{
 ////// VOCABULARIES specifics //////
 main.common-main{
     padding: 25px 15px;
-    .sectionCS-list{
+    .section-list{
         margin-top: 15px;
-        .sectionCS-box-title{
+        .section-box-title{
             display: flex;
             flex-direction: row;
             .fa-solid.fa-puzzle-piece{
@@ -173,9 +173,6 @@ main.common-main{
                 margin-right: 6px;
             }
         }
-    }
-    .vocab-input{
-        width: 209px;
     }
     .show-box{
         .show-list{
