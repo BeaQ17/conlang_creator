@@ -224,12 +224,35 @@ main.lang-main{
     .only-bottom{
         width: 197px;
     }
-    .hero{
-        text-align: center;
+    .show-box{
+        .show-list{
+            margin-top: 20px;
+        }
+    }
+    .jumbo{
+        display: flex;
+        flex-direction: row;
+        .hero-text{
+            text-align: left;
+            width: 40%;
+        }
+        .hero-img{
+            width: 60%;
+            height: 100%;
+            border: 1px dotted $dark-grey;
+        }
     }
     .add-section{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .section-list{
+        .section-item{
+            margin-bottom: 25px;
+        }
     }
 }
 

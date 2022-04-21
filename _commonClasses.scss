@@ -44,3 +44,10 @@ hr{
 .flip{
     transform: rotate(180deg);
 }
+
+.style-none{
+    list-style: none;
+    li{
+        margin-left: -30px;
+    }
+}

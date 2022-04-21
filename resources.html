@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Handler - My Languages</title>
+    <title>Language Handler - Resources</title>
     <!-- css -->
     <link rel="stylesheet" href="style.css">
     <!-- google fonts -->
@@ -33,48 +33,18 @@
         <nav>
             <a href="index.html">Shuffle and String</a>
             <a href="myLanguages.html">My languages</a>
-            <a href="">Resources</a>
+            <a href="resources.html">Resources</a>
         </nav>
     </header>
 
-
-    <main class="row lang-main">
-
-        <aside class="col-md-3 col-12">
-
-            <div class="language-elements">
-                <h6><i class="fa-regular fa-puzzle"></i>Common sections cheatsheet</h6>
-                <!-- accordion -->
-            </div>
-
-            <hr>
-    
-            <!-- languages list -->
-            <div class="show-box">
-                <div class="add-lang">
-                    <input type="text" class="only-bottom" placeholder="Write name">
-                    <button class="purple_btn"><i class="fa-solid fa-book-bookmark" style="margin-right: 10px;"></i>Add new language</button>
-                </div>
-                <div class="lang-list"></div>
-            </div>
-        </aside>
-
-        <!-- hero (lang name + completion status)-->
-        <div class="showcase col-md-9 col-12">
-            <div class="hero">
-                <h1>{{Language name}}</h1>
-                <p><strong>Completion status:</strong>{{Non complete}}</p>
-            </div>
-
-            <!-- add new section -->
-            <div class="add-section">
-                <input type="text" class="only-bottom" placeholder="Section name">
-                <button class="purple_btn"><i class="fa-solid fa-bookmark" style="margin-right: 10px;"></i>Add section</button>
-            </div>
+    <main>
+        <h4>Useful resources</h4>
+        <div class="tips">
+            <p>Don't keep your work only on the app: be safer by also writing things down somewhere else, like a file you'll put on an usb, an  online document, etc.</p>
+            <button class="purple_btn">Export my languages</button>
+            <!-- popup that allows you to choose the kind of file, where to save it, which language to export (one at a time)-->
         </div>
-
     </main>
-
 
     <footer>
         <p>© Allegoris 2022</p>
