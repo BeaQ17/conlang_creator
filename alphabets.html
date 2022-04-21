@@ -25,15 +25,110 @@
 <body>
 
     <header>
-        <a href="https://ko-fi.com/allegorisapps" target="_blank">
-        <img id="hero-title" src="./imgs/red_logo.png" alt="allegoris red logo">
-        <p>From Allegoris</p> </a> <!-- leads to allegoris kofi -->
-        <h1>language handler</h1> <!--og title: Conlang Creator-->
+        <a href="https://ko-fi.com/allegorisapps" target="_blank" class="head-link">
+            <img id="hero-title" src="./imgs/red_logo.png" alt="allegoris red logo">
+            <p class="logo-p">From Allegoris</p> 
+        </a>
+        <h1>language handler</h1> 
         <nav>
-            <a href="index.html">Shuffle and String</a>
+            <a href="index.html">Resources</a>
             <a href="vocabularies.html">Vocabularies</a>
             <a href="alphabets.html">Alphabets</a>
             <a href="syllables.html">Syllables</a>
-            <a href="resources.html">Resources</a>
         </nav>
     </header>
+
+
+    <main class="row common-main">
+
+        <aside class="col-md-3 col-12 bordered-aside">
+
+            <div class="sounds-elements">
+                <h6><i class="fa-solid fa-lock-open" style="margin-right: 7px;"></i>Common sounds cheatsheet</h6>
+                <!-- accordion -->
+            </div>
+
+            <hr>
+            <!-- alphabets list-->
+            <div class="show-box">
+                <div class="add-ab">
+                    <input type="text" class="only-bottom" placeholder="Write alphabet name">
+                    <button class="purple_btn"><i class="fa-solid fa-arrow-down-a-z" style="margin-right: 10px;"></i>Add new alphabet</button>
+                </div>
+                <div class="show-list">
+                    <ul class="style-none">
+                        <li><i class="fa-solid fa-arrow-down-a-z" style="margin-right: 7px;"></i><a href="#">Alphabet</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </aside>
+
+        <div class="showcase col-md-9 col-12">
+
+                <!-- ACCORDION -->
+                <div class="accordion accordion-flush player-accordion" id="shuffle-string-accordion">
+                    <!-- SOUND SHUFFLER-->
+                    <div class="accordion-item">
+                      <h1 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <i class="fa-solid fa-chevron-down" style="margin-right: 10px;"></i>Sounds shuffler
+                        </button>
+                      </h1>
+                      <div id="collapseOne" class="item-box accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body item-box-content">
+                            <p><strong>What is this for?</strong></p>
+                            <p class="smaller-p">You have your list of chosen sounds to assemble and combine to create words–but inevitably, you focus too much on some and 
+                            not enough on others. Every language has its favored sounds, but it wouldn't do to just forget some of your carefully chosen ones. </p>
+                            <p class="smaller-p">Enter your sounds or choose an alphabet and randomly shuffle it to make sure you're considering all sounds when searching 
+                                for just the right one to add.</p>
+                            <div class="phases row">
+                                <!-- ADDER -->
+                                <div class="adder col-12 col-md-6" id="add-letters-container">
+                                    <h5>Choose the sounds</h5>
+                                    <div class="input-box">
+                                        <input class="add-input gen-text-input" type="text" name="add-letter-input" id="add-letter-input">
+                                        <button class="purple_btn" onclick="addLetter()">Add letter</button>
+                                    </div>
+                                    <h4>This is your current alphabet:</h4>
+                                    <ul>
+                                        <li id="ab-list"></li>
+                                    </ul>
+                                </div>
+        
+                                <!-- SHUFFLER -->
+                                <div class="shuffler col-12 col-md-6" id="alphabet-shuffler-container">
+                                    <h5>Shuffle the sounds</h5>
+                                    <div class="btn">
+                                        <button class="purple_btn" id="shuffle-btn">Shuffle</button>
+                                    </div>
+                                    
+                                    <div class="word">
+                                        <h4>Letter:</h4><h4 class="w1" id="letter"></h4>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            
+                        </div>
+                      </div>
+                    </div>
+                </div> <!-- /accordion accordion-flush -->
+                <!-- add button to add alphabet -->
+        </div>
+
+    </main>
+
+
+
+    <footer>
+        <p>© Allegoris 2022</p>
+        <div class="links">
+            <a href="https://ko-fi.com/allegorisapps" target="_blank"><i class="fa-solid fa-mug-hot"></i></a> 
+            <a href="mailto:allegorisapps@gmail.com"><i class="fa-solid fa-at"></i></a>
+            <a href="#"><i class="fa-brands fa-tumblr"></i></a>
+        </div>
+    </footer>
+    
+    <!-- JS -->
+    <script src="main.js"></script>

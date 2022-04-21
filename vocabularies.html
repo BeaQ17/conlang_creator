@@ -25,71 +25,40 @@
 <body>
 
     <header>
-        <a href="https://ko-fi.com/allegorisapps" target="_blank">
+        <a href="https://ko-fi.com/allegorisapps" target="_blank" class="head-link">
             <img id="hero-title" src="./imgs/red_logo.png" alt="allegoris red logo">
             <p>From Allegoris</p> 
         </a>
         <h1>language handler</h1> 
         <nav>
-            <a href="index.html">Shuffle and String</a>
+            <a href="index.html">Resources</a>
             <a href="vocabularies.html">Vocabularies</a>
             <a href="alphabets.html">Alphabets</a>
             <a href="syllables.html">Syllables</a>
-            <a href="resources.html">Resources</a>
         </nav>
     </header>
 
 
-    <main class="row lang-main">
+    <main class="row common-main">
 
-        <aside class="col-md-3 col-12">
+        <aside class="col-md-3 col-12 bordered-aside">
 
-            <div class="language-elements">
-                <h6><i class="fa-regular fa-puzzle"></i>Common sections cheatsheet</h6>
+            <div class="vocab-elements">
+                <h6><i class="fa-solid fa-lock-open" style="margin-right: 7px;"></i>Common sections cheatsheet</h6>
                 <!-- accordion -->
             </div>
 
             <hr>
     
-            <!-- languages list -->
+            <!-- vocab list -->
             <div class="show-box">
                 <div class="add-lang">
-                    <input type="text" class="only-bottom" placeholder="Write language name">
-                    <button class="purple_btn"><i class="fa-solid fa-book-bookmark" style="margin-right: 10px;"></i>Add new language</button>
+                    <input type="text" class="only-bottom vocab-input" placeholder="Write its language's name" title="Use the name of the language the words belong to">
+                    <button class="purple_btn"><i class="fa-solid fa-book-bookmark" style="margin-right: 10px;"></i>Add new vocabulary</button>
                 </div>
                 <div class="show-list">
                     <ul class="style-none">
-                        <li><i class="fa-solid fa-book-bookmark" style="margin-right: 7px;"></i><a href="#">Language</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <hr>
-
-            <!-- alphabets list-->
-            <div class="show-box">
-                <div class="add-ab">
-                    <input type="text" class="only-bottom" placeholder="Write alphabet name">
-                    <button class="purple_btn"><i class="fa-solid fa-arrow-down-a-z" style="margin-right: 10px;"></i>Add new alphabet</button>
-                </div>
-                <div class="show-list">
-                    <ul class="style-none">
-                        <li><i class="fa-solid fa-arrow-down-a-z" style="margin-right: 7px;"></i><a href="#">Alphabet</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <hr> 
-
-            <!-- syllables list-->
-            <div class="show-box">
-                <div class="add-syl-list">
-                    <input type="text" class="only-bottom" placeholder="Write list name">
-                    <button class="purple_btn"><i class="fa-solid fa-book-open" style="margin-right: 10px;"></i>Add syllable list</button>
-                </div>
-                <div class="show-list">
-                    <ul class="style-none">
-                        <li><i class="fa-solid fa-book-open" style="margin-right: 7px;"></i><a href="#">Syllable list</a></li>
+                        <li><i class="fa-solid fa-book-bookmark" style="margin-right: 7px;"></i><a href="#">Vocabulary</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,15 +69,15 @@
         <div class="showcase col-md-9 col-12">
             <!-- hero (lang name + completion status + alphabet and syllables list)-->
             <div class="jumbo">
+                <div class="hero-img">
+                    <img src="#" alt="phonetic transcription of alphabet"> <!-- source: the img of the alphabet linked-->
+                </div>
                 <div class="hero-text">
                     <h1>Language name</h1>
                     <p><strong>Completion status:</strong> Non complete</p>
                     <p><strong>Alphabet(s):</strong> <a href="">alphabet</a></p>
                     <p><strong>Syllables:</strong> <a href="">syllist</a></p>
                     <hr style="margin-bottom: 0; margin-right: 20px;">
-                </div>
-                <div class="hero-img">
-                    <img src="#" alt="phonetic transcription of alphabet"> <!-- source: the img of the alphabet linked-->
                 </div>
             </div>
 
@@ -215,8 +184,6 @@
             <a href="mailto:allegorisapps@gmail.com"><i class="fa-solid fa-at"></i></a>
             <a href="#"><i class="fa-brands fa-tumblr"></i></a>
         </div>
-        
-
     </footer>
     
     <!-- JS -->

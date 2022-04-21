@@ -1,3 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none !important;
+}
+
 .purple_btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -49,18 +60,14 @@ hr {
   margin-left: -30px;
 }
 
-@use "_variables.scss";
-@use "_commonClasses.scss";
-/*inevitables*/
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.bordered-aside {
+  border-right: 1px dotted #353434;
 }
 
-*:focus {
-  outline: none !important;
+.gen-box {
+  border: 1px solid #353434;
+  margin: 15px;
+  padding: 12px;
 }
 
 body {
@@ -74,6 +81,10 @@ body a {
 }
 
 body a:hover {
+  color: #610000;
+}
+
+body a:active {
   color: #610000;
 }
 
@@ -92,23 +103,27 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding-top: 25px;
+  padding-top: 6px;
   background-color: #707070;
 }
 
-header a {
-  color: black;
+header .head-link {
   text-align: center;
 }
 
-header a p {
+header .head-link .logo-p {
   text-align: center;
   font-family: 'Manrope', sans-serif;
   font-size: 0.85rem;
   margin: 0;
+  color: black;
 }
 
-header a img {
+header .head-link .logo-p:hover {
+  color: #610000;
+}
+
+header .head-link img {
   width: 50px;
 }
 
@@ -141,6 +156,8 @@ header nav a {
   margin: 0px 20px;
 }
 
+@use "_variables.scss";
+@use "_commonClasses.scss";
 main {
   font-family: 'Manrope', sans-serif;
   /*
@@ -162,13 +179,16 @@ main {
 }
 
 main .accordion.accordion-flush {
-  width: 85%;
   margin: auto;
-  margin-top: 100px;
+  width: 95%;
+}
+
+main .accordion.accordion-flush .accordion-item {
+  background: transparent;
 }
 
 main .accordion.accordion-flush .accordion-button {
-  background-color: #bababa;
+  background: transparent;
   border-radius: 0 !important;
   font-size: 1.5rem;
   display: -webkit-box;
@@ -200,11 +220,10 @@ main .accordion.accordion-flush .accordion-button:focus {
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content {
-  background-color: #ffffff86;
+  background: transparent;
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content .phases {
-  background-color: #ffffff86;
   margin-top: 35px;
 }
 
@@ -251,7 +270,7 @@ main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffl
 }
 
 main .accordion.accordion-flush .accordion-body.item-box-content .phases .shuffler .word .w1 {
-  color: #056305;
+  color: black;
   font-weight: bold;
 }
 
@@ -287,46 +306,44 @@ main .stringer .stringer-phases .phase-2 ul {
 }
 
 main .stringer .stringer-phases .phase-2 ul li {
-  color: #056305;
+  color: black;
   font-weight: bold;
   font-size: 1.5rem;
   margin-left: -29px;
 }
 
-main.lang-main {
+main.common-main {
   padding: 25px 15px;
 }
 
-main.lang-main .only-bottom {
-  width: 197px;
+main.common-main .vocab-input {
+  width: 209px;
 }
 
-main.lang-main .show-box .show-list {
+main.common-main .show-box .show-list {
   margin-top: 20px;
 }
 
-main.lang-main .jumbo {
+main.common-main .jumbo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-main.lang-main .jumbo .hero-text {
+main.common-main .jumbo .hero-text {
   text-align: left;
-  width: 40%;
 }
 
-main.lang-main .jumbo .hero-img {
-  width: 60%;
-  height: 100%;
+main.common-main .jumbo .hero-img {
+  width: 100%;
   border: 1px dotted #353434;
 }
 
-main.lang-main .add-section {
+main.common-main .add-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,7 +360,7 @@ main.lang-main .add-section {
   margin-bottom: 20px;
 }
 
-main.lang-main .section-list .section-item {
+main.common-main .section-list .section-item {
   margin-bottom: 25px;
 }
 

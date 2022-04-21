@@ -25,15 +25,110 @@
 <body>
 
     <header>
-        <a href="https://ko-fi.com/allegorisapps" target="_blank">
-        <img id="hero-title" src="./imgs/red_logo.png" alt="allegoris red logo">
-        <p>From Allegoris</p> </a> <!-- leads to allegoris kofi -->
-        <h1>language handler</h1> <!--og title: Conlang Creator-->
+        <a href="https://ko-fi.com/allegorisapps" target="_blank" class="head-link">
+            <img id="hero-title" src="./imgs/red_logo.png" alt="allegoris red logo">
+            <p class="logo-p">From Allegoris</p> 
+        </a>
+        <h1>language handler</h1> 
         <nav>
-            <a href="index.html">Shuffle and String</a>
+            <a href="index.html">Resources</a>
             <a href="vocabularies.html">Vocabularies</a>
             <a href="alphabets.html">Alphabets</a>
             <a href="syllables.html">Syllables</a>
-            <a href="resources.html">Resources</a>
         </nav>
     </header>
+
+    <main class="row common-main">
+        <aside class="col-md-3 col-12 bordered-aside">
+
+            <!--<div class="sounds-elements">
+                <h6><i class="fa-solid fa-lock-open" style="margin-right: 7px;"></i>Common sounds cheatsheet</h6>
+            </div> 
+
+            <hr> -->
+            <!-- syllables list-->
+            <div class="show-box">
+                <div class="add-syl-list">
+                    <input type="text" class="only-bottom" placeholder="Write list name">
+                    <button class="purple_btn"><i class="fa-solid fa-book-open" style="margin-right: 10px;"></i>Add syllable list</button>
+                </div>
+                <div class="show-list">
+                    <ul class="style-none">
+                        <li><i class="fa-solid fa-book-open" style="margin-right: 7px;"></i><a href="#">Syllable list</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </aside>
+
+        <div class="col-md-9 col-12">
+            
+            <!-- ACCORDION -->
+            <div class="accordion accordion-flush" id="shuffle-string-accordion">
+                <!-- SYLLABLE STRINGER -->
+                <div class="accordion-item">
+                    <h1 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa-solid fa-chevron-down" style="margin-right: 10px;"></i>Syllables stringer
+                    </button>
+                    </h1>
+                    <div id="collapseTwo" class="item-box accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body item-box-content">
+                            <div class="stringer" id="stringer-container">
+                                <p><strong>What is this for?</strong></p>
+                                <p class="smaller-p">You might be tired of thinking of word after word. Especially if it's a subgroup of them that needs certain sounds.
+                                    Let's have the Stringer do it.</p>
+                                <p class="smaller-p"><strong>Tip:</strong> Add single sounds too instead of just syllables to get more dynamic words. You can still add them if you select a list too.</p>
+                                <div class="stringer-phases row">
+                                    <div class="phase-1 col-12 col-md-6">
+                                        <div class="input-box">
+                                            <input class="add-input gen-text-input" type="text" name="add-syllable-input" id="add-syllable-input">
+                                            <button class="purple_btn" onclick="addSyllable()">Add syllable</button>
+                                        </div>
+                                        <p style="margin-top: 1rem;">Or</p>
+                                        <div class="select-list">
+                                            <button class="purple_btn">Choose syllable list</button>
+                                        </div>
+                                        <h4>This is your syllables list:</h4>
+                                        <ul>
+                                            <li id="syllable-list"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="phase-2 col-12 col-md-6">
+                                        <p class="label-p">Choose amount of syllables</p>
+                                        <div class="input-box">
+                                            <input type="text" name="amount-syllable-input" id="amount-syllable-input" class="get-input gen-text-input">
+                                            <button onclick="getSyllables()" class="purple_btn">Get new word</button>
+                                        </div>
+                                        <h4>This is your word:</h4>
+                                        <ul>
+                                            <li id="new-word-item"></li>
+                                        </ul>
+                                    </div> <!-- /phase-2 -->
+                                </div> <!-- /stringer-phase -->
+                            </div> <!-- /stringer -->
+                        </div> <!-- /accordion-body -->
+                    </div> <!-- /collpseTwo -->
+                </div> <!-- /accordion-item-->
+            </div> <!-- /accordion accordion-flush -->
+
+            <hr>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <p>© Allegoris 2022</p>
+        <div class="links">
+            <a href="https://ko-fi.com/allegorisapps" target="_blank"><i class="fa-solid fa-mug-hot"></i></a> 
+            <a href="mailto:allegorisapps@gmail.com"><i class="fa-solid fa-at"></i></a>
+            <a href="#"><i class="fa-brands fa-tumblr"></i></a>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+
+</body>
+</html>
