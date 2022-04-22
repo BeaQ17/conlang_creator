@@ -109,6 +109,33 @@ hr{
     color: $logo-red;
 }
 
+.table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .table-row{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        .table-cell{
+            text-align: center;
+            border: 1px solid $dark-grey;
+            padding: 4px 0;
+            width: 50%;
+        }
+        .phoneme{
+            font-weight: bold;
+        }
+        
+        /*
+        .table-cell-wide{
+            text-align: center;
+            border: 1px solid $dark-grey;
+            width: 50%;
+        }*/
+    }
+}
+
 
 //BODY
 

@@ -123,6 +123,45 @@ hr {
   color: #610000;
 }
 
+.table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.table .table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  /*
+        .table-cell-wide{
+            text-align: center;
+            border: 1px solid $dark-grey;
+            width: 50%;
+        }*/
+}
+
+.table .table-row .table-cell {
+  text-align: center;
+  border: 1px solid #353434;
+  padding: 4px 0;
+  width: 50%;
+}
+
+.table .table-row .phoneme {
+  font-weight: bold;
+}
+
 body {
   background-color: #bababa !important;
   min-height: 100vh;
@@ -420,8 +459,7 @@ main.common-main .section-list .section-box-title {
           flex-direction: row;
 }
 
-main.common-main .section-list .section-box-title .fa-solid.fa-puzzle-piece {
-  font-size: 1.5rem;
+main.common-main .section-list .fa-solid.fa-puzzle-piece {
   margin-right: 6px;
 }
 
@@ -471,6 +509,11 @@ main.common-main .showcase {
 
 main.common-main .showcase .sections-list .section-item .notes-box {
   margin: 15px 10px;
+}
+
+main.common-main .scroll-accordion {
+  height: 500px;
+  overflow: scroll;
 }
 
 footer {
