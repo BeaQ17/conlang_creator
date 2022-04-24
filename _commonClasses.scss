@@ -10,6 +10,12 @@
 }
 
 
+//ICONS
+.big-puzzle{
+    font-size: 1.4rem;
+}
+
+
 
 //BUTTONS
 .purple_btn{
@@ -67,6 +73,10 @@
     padding-left: 28px;
 }
 
+.done-undone-section{
+    cursor: pointer;
+}
+
 
 //ELEMENTS
 .row{
@@ -109,6 +119,11 @@ hr{
     color: $logo-red;
 }
 
+.scroll-accordion{
+    height: 500px;
+    overflow: scroll;
+}
+
 .table{
     display: flex;
     flex-direction: column;
@@ -119,12 +134,15 @@ hr{
         width: 100%;
         .table-cell{
             text-align: center;
-            border: 1px solid $dark-grey;
             padding: 4px 0;
             width: 50%;
         }
-        .phoneme{
+        .tc-left{
             font-weight: bold;
+            border-left: 1px solid $dark-grey;
+        }
+        .tc-left, .tc-right{
+            border-right: 1px solid $dark-grey;
         }
         
         /*
@@ -133,6 +151,12 @@ hr{
             border: 1px solid $dark-grey;
             width: 50%;
         }*/
+    }
+    .top{
+        border-top: 1px solid $dark-grey;
+    }
+    .bottom{
+        border-bottom: 1px solid $dark-grey;
     }
 }
 

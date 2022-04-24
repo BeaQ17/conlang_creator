@@ -15,6 +15,10 @@ col-lg = screen >= 1200px
   outline: none !important;
 }
 
+.big-puzzle {
+  font-size: 1.4rem;
+}
+
 .purple_btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -80,6 +84,10 @@ col-lg = screen >= 1200px
   padding-left: 28px;
 }
 
+.done-undone-section {
+  cursor: pointer;
+}
+
 .row {
   margin: 0 !important;
   padding: 0;
@@ -123,6 +131,11 @@ hr {
   color: #610000;
 }
 
+.scroll-accordion {
+  height: 500px;
+  overflow: scroll;
+}
+
 .table {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,13 +166,25 @@ hr {
 
 .table .table-row .table-cell {
   text-align: center;
-  border: 1px solid #353434;
   padding: 4px 0;
   width: 50%;
 }
 
-.table .table-row .phoneme {
+.table .table-row .tc-left {
   font-weight: bold;
+  border-left: 1px solid #353434;
+}
+
+.table .table-row .tc-left, .table .table-row .tc-right {
+  border-right: 1px solid #353434;
+}
+
+.table .top {
+  border-top: 1px solid #353434;
+}
+
+.table .bottom {
+  border-bottom: 1px solid #353434;
 }
 
 body {
@@ -445,11 +470,19 @@ main.common-main {
   padding: 25px 15px;
 }
 
+main.common-main .info {
+  margin-top: 15px;
+}
+
 main.common-main .section-list {
   margin-top: 15px;
 }
 
-main.common-main .section-list .section-box-title {
+main.common-main .section-list .section-item {
+  margin-top: 30px;
+}
+
+main.common-main .section-list .section-item .section-box-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,8 +492,12 @@ main.common-main .section-list .section-box-title {
           flex-direction: row;
 }
 
-main.common-main .section-list .fa-solid.fa-puzzle-piece {
+main.common-main .section-list .section-item .section-box-title .fa-solid.fa-puzzle-piece {
   margin-right: 6px;
+}
+
+main.common-main .show-box .add-vocab-box .add-vocab-input {
+  width: 90%;
 }
 
 main.common-main .show-box .show-list {
@@ -509,11 +546,6 @@ main.common-main .showcase {
 
 main.common-main .showcase .sections-list .section-item .notes-box {
   margin: 15px 10px;
-}
-
-main.common-main .scroll-accordion {
-  height: 500px;
-  overflow: scroll;
 }
 
 footer {

@@ -163,17 +163,33 @@ main{
 ////// other pages //////
 main.common-main{
     padding: 25px 15px;
+
+    //info part in vocabs aside accordion
+    .info{
+        margin-top: 15px;
+    }
+    //list of sections in vocabs
     .section-list{
         margin-top: 15px;
-        .section-box-title{
-            display: flex;
-            flex-direction: row;
+        .section-item{
+            margin-top: 30px;
+            .section-box-title{
+                display: flex;
+                flex-direction: row;
+                .fa-solid.fa-puzzle-piece{
+                    margin-right: 6px;
+                }
+            }
         }
-        .fa-solid.fa-puzzle-piece{
-            margin-right: 6px;
-        }
+        
     }
+    //alphabets list in alphabets page
     .show-box{
+        .add-vocab-box{
+            .add-vocab-input{
+                width: 90%;
+            }
+        }
         .show-list{
             margin-top: 20px;
         }
@@ -207,12 +223,6 @@ main.common-main{
         }
     }
 
-
-    //alphabets accordion
-    .scroll-accordion{
-        height: 500px;
-        overflow: scroll;
-    }
 
 
 }
