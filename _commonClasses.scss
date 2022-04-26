@@ -124,10 +124,11 @@ hr{
     overflow: scroll;
 }
 
-.table{
+.table-mine{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 30px;
     .table-row{
         display: flex;
         flex-direction: row;
@@ -143,6 +144,8 @@ hr{
         }
         .tc-left, .tc-right{
             border-right: 1px solid $dark-grey;
+            border-bottom: 1px solid $dark-grey;
+            border-top: 1px solid $dark-grey;
         }
         
         /*
@@ -152,12 +155,7 @@ hr{
             width: 50%;
         }*/
     }
-    .top{
-        border-top: 1px solid $dark-grey;
-    }
-    .bottom{
-        border-bottom: 1px solid $dark-grey;
-    }
+
 }
 
 

@@ -136,7 +136,7 @@ hr {
   overflow: scroll;
 }
 
-.table {
+.table-mine {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,9 +145,10 @@ hr {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  margin-bottom: 30px;
 }
 
-.table .table-row {
+.table-mine .table-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,27 +165,21 @@ hr {
         }*/
 }
 
-.table .table-row .table-cell {
+.table-mine .table-row .table-cell {
   text-align: center;
   padding: 4px 0;
   width: 50%;
 }
 
-.table .table-row .tc-left {
+.table-mine .table-row .tc-left {
   font-weight: bold;
   border-left: 1px solid #353434;
 }
 
-.table .table-row .tc-left, .table .table-row .tc-right {
+.table-mine .table-row .tc-left, .table-mine .table-row .tc-right {
   border-right: 1px solid #353434;
-}
-
-.table .top {
-  border-top: 1px solid #353434;
-}
-
-.table .bottom {
   border-bottom: 1px solid #353434;
+  border-top: 1px solid #353434;
 }
 
 body {
