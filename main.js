@@ -38,16 +38,16 @@ function getIndexNumber(min, max){
 
 function shuffleAlphabet(){
 
-        /*
+        
     //shuffle the ante-alphabet
     let index = getIndexNumber(0, alphabet.length-1); //it is -1 because arrays start counting from 0
     resultOne.innerText = alphabet[index];
-    */
+    
 
     
-    //shuffle the user's alphabet:
+    /*shuffle the user's alphabet:
     let index = getIndexNumber(0, userAlphabet.length-1); 
-    resultOne.innerText = userAlphabet[index];
+    resultOne.innerText = userAlphabet[index];*/
 
 }
 
@@ -57,6 +57,9 @@ function shuffleAlphabet(){
 
 //define the empty array
 userSyllables = [];
+
+myAlphabet = ["a", "b", "t͡ʃ", "d", "e", "f", "g", "ɦ", "i", "dʒ", "k", "l", "m", "ŋ", "o",
+"p", "r", "s", "ʃ", "t", "u", "v", "z"];
 
 //add-letter function
 function addSyllable(){
@@ -72,6 +75,8 @@ function addSyllable(){
 }
 
 
+//OPTION ONE - USE INPUTED SYLLABLES
+//with [html code of button]
 //shuffle and pick syllables
 function getSyllables(){
     //choose amount of syllables
@@ -90,6 +95,8 @@ function getSyllables(){
 }
 
 
-
+//OPTION TWO - USE DETERMINED ALPHABET
+//with 
+//determine amount of letters and shuffle them
 
 

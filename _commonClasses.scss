@@ -162,7 +162,8 @@ hr{
 //BODY
 
 body{
-    background-color: $light-grey !important;
+    
+    //background-color: $light-grey !important;
     min-height: 100vh;
     a{
         text-decoration: none;
@@ -185,7 +186,7 @@ header{
     align-items: center;
     width: 100%;
     padding-top: 6px;
-    background-color: $logo-grey;
+    background-color: $light-grey;
     .head-link{
         text-align: center;
         .logo-p{

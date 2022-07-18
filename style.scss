@@ -1,7 +1,7 @@
+//@use "_variables.scss"; //in case import gets deprecated
+//@use "_commonClasses.scss";
 @import "_variables.scss";
 @import "_commonClasses.scss";
-@use "_variables.scss"; //in case import gets deprecated
-@use "_commonClasses.scss";
 
 
 
@@ -234,7 +234,7 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 15px 0px;
-    background-color: $logo-grey;
+    background-color: $light-grey;
     color: whitesmoke;
     bottom: 0;
     top: 100%;
