@@ -29,7 +29,7 @@
             <img id="hero-title" src="./imgs/red_logo.png" alt="allegoris red logo">
             <p class="logo-p">From Allegoris</p> 
         </a>
-        <h1>language handler</h1> 
+        <h1>Conlang Aid</h1> 
         <nav>
             <a href="index.html">Resources</a>
             <a href="vocabularies.html">Vocabularies</a>
@@ -41,11 +41,6 @@
     <main class="row common-main">
         <aside class="col-md-3 col-12 bordered-aside">
 
-            <!--<div class="sounds-elements">
-                <h6><i class="fa-solid fa-lock-open" style="margin-right: 7px;"></i>Common sounds cheatsheet</h6>
-            </div> 
-
-            <hr> -->
             <!-- syllables list-->
             <div class="show-box">
                 <div class="add-syl-list">
@@ -58,13 +53,28 @@
                     </ul>
                 </div>
             </div>
+
+            <hr>
+
+            <!-- matched syllables list-->
+            <div class="show-box">
+                <div class="add-syl-list">
+                    <input type="text" class="only-bottom" placeholder="Write list name">
+                    <button class="purple_btn"><i class="fa-solid fa-book-open" style="margin-right: 10px;"></i>Add matched list</button>
+                </div>
+                <div class="show-list">
+                    <ul class="style-none">
+                        <li><i class="fa-solid fa-book-open" style="margin-right: 7px;"></i><a href="#">Matched syllables list</a></li>
+                    </ul>
+                </div>
+            </div>
             
         </aside>
 
         <!-- right section with accordions -->
         <div class="col-md-9 col-12">
             
-            <!-- ACCORDION 1 -->
+            <!-- ACCORDION 1 - STRINGER -->
             <div class="accordion accordion-flush" id="shuffle-string-accordion">
                 <!-- SYLLABLE STRINGER -->
                 <div class="accordion-item">
@@ -113,13 +123,13 @@
                                 </div> <!-- /stringer-phase -->
                             </div> <!-- /stringer -->
                         </div> <!-- /accordion-body -->
-                    </div> <!-- /collpseTwo -->
+                    </div> <!-- /collapseTwo -->
                 </div> <!-- /accordion-item-->
             </div> <!-- /ACCORDION 1 -->
 
             <hr style="margin-top: 0;">
 
-            <!-- ACCORDION 2 -->
+            <!-- ACCORDION 2 - MATCHER -->
             <div class="accordion accordion-flush" id="matcher-accordion">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingThree">
@@ -130,11 +140,21 @@
                   <div id="collapseThree" class="item-box accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <p><strong>What is this for?</strong></p>
-                        <p class="smaller-p">This doesn't work as an actual translator, but as a word-builder aid. <!--<br> It is based on the arbitrary, untested and unproved idea 
-                            that certain sound-agglomerates in a language are conveyed through another specific agglomerate in another language. It is such a random idea I don't evn have examples for it. <br>
-                         A more accurate description would be: imagine you like the way certain sounds work together in a language and you want to convey the same feeling in yours. For example, I like how 
-                         "dragon" sounds. So I'll take its distinctive sounds, the hard d, r and g, the music of a and on, and decide they correspond to d, ak, r, e and az. From "dragon" I'd get "dakeraz". 
-                         Which doesn't even give me what I was looking for. --></p> 
+                        <p class="smaller-p">This doesn't work as an actual translator, but as a word-builder aid.</p> 
+                        <p>It would be easier if you'd decided some sounds in a certain language should always correspond to chosen sounds in your conlang. The matcher aid can help 
+                            you automatically translate words without having to constantly check your matched lists.</p>
+                        
+                        <div class="matcher">
+                            <button class="purple_btn">Choose matched list</button> <!-- onclick="chooseMatchedList()" -->
+                            <p style="margin-top: 1rem;">Input existing word</p>
+                            <input type="text" id="match-this-word">
+                            <button class="purple_btn" id="matcher-btn">Match word</button> <!-- onclick="matchWord()" -->
+                            <h4>This is your word:</h4>
+                            <ul>
+                                <li id="matched-new-word"></li>
+                            </ul>
+                        </div>
+
                     </div>
                   </div>
                 </div>
