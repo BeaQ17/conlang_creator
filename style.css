@@ -19,7 +19,6 @@ col-lg = screen >= 1200px
 }
 
 .purple_btn {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 4px 20px;
@@ -33,7 +32,6 @@ col-lg = screen >= 1200px
 }
 
 .transparent_btn {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0;
@@ -416,7 +414,6 @@ footer {
   top: 100%;
   width: 100%;
   margin-top: 50px;
-  position: -webkit-sticky;
   position: sticky;
 }
 footer p {
